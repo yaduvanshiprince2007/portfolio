@@ -1,27 +1,25 @@
-import type React from "react"
-
-import { useState, useEffect, useRef, createRef } from "react"
+import type React from "react";
+import { useState, useEffect, useRef, createRef } from "react";
 
 interface ProjectDetail {
-  id: number
-  name: string
-  description?: string
-  technologies?: string[]
-  feature: string[]
-  duration: string
-  role?: string
-  startDate: Date
+  id: number;
+  name: string;
+  description?: string;
+  technologies?: string[];
+  feature: string[];
+  duration: string;
+  role?: string;
+  startDate: Date;
 }
 
-// Parse duration string into Date object for sorting
 const parseDate = (dateStr: string): Date => {
-  const dateRange = dateStr.split("–").map((d) => d.trim())
-  const [startMonth, startYear] = dateRange[0].split(" ")
-  const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
-  const monthIndex = months.indexOf(startMonth)
-  const yearNum = Number.parseInt(startYear || new Date().getFullYear().toString())
-  return new Date(yearNum, monthIndex)
-}
+  const dateRange = dateStr.split("–").map((d) => d.trim());
+  const [startMonth, startYear] = dateRange[0].split(" ");
+  const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  const monthIndex = months.indexOf(startMonth);
+  const yearNum = Number.parseInt(startYear || new Date().getFullYear().toString());
+  return new Date(yearNum, monthIndex);
+};
 
 const items: ProjectDetail[] = [
   {
@@ -38,10 +36,10 @@ const items: ProjectDetail[] = [
       "Built React-based frontend with responsive design",
       "Integrated Redis caching for 20-30% performance improvement",
       "Containerized services using Docker for easy deployment",
-      "Implemented CI/CD pipeline for automated testing and deployment",
+      "Implemented CI/CD pipeline for automated testing and deployment"
     ],
     duration: "Current Project",
-    startDate: parseDate("Jan 2025"),
+    startDate: parseDate("Jan 2025")
   },
   {
     id: 2,
@@ -57,10 +55,10 @@ const items: ProjectDetail[] = [
       "Optimized memory usage for handling large file uploads",
       "Built error handling and retry mechanisms",
       "Integrated AWS Lambda for serverless processing",
-      "Implemented progress tracking with estimated completion time",
+      "Implemented progress tracking with estimated completion time"
     ],
     duration: "Recent Project",
-    startDate: parseDate("Oct 2024"),
+    startDate: parseDate("Oct 2024")
   },
   {
     id: 3,
@@ -76,10 +74,10 @@ const items: ProjectDetail[] = [
       "Implemented user presence and typing indicators",
       "Built Redux state management for consistent UI updates",
       "Created responsive mobile-friendly design",
-      "Implemented message encryption for security",
+      "Implemented message encryption for security"
     ],
     duration: "2024",
-    startDate: parseDate("Jun 2024"),
+    startDate: parseDate("Jun 2024")
   },
   {
     id: 4,
@@ -95,10 +93,10 @@ const items: ProjectDetail[] = [
       "Created task filtering and search capabilities",
       "Implemented notification system for task updates",
       "Built dashboard with project statistics and analytics",
-      "Created customizable workflow stages and task types",
+      "Created customizable workflow stages and task types"
     ],
     duration: "2024",
-    startDate: parseDate("May 2024"),
+    startDate: parseDate("May 2024")
   },
   {
     id: 5,
@@ -114,10 +112,10 @@ const items: ProjectDetail[] = [
       "Implemented real-time monitoring and alerting system",
       "Created data aggregation and reporting services",
       "Optimized database queries for high-frequency data ingestion",
-      "Built secure device authentication and authorization",
+      "Built secure device authentication and authorization"
     ],
     duration: "Internship 2022",
-    startDate: parseDate("Feb 2022"),
+    startDate: parseDate("Feb 2022")
   },
   {
     id: 6,
@@ -134,10 +132,10 @@ const items: ProjectDetail[] = [
       "Implemented conversation memory for follow-up queries",
       "Connected AI with backend APIs for product search and actions",
       "Built responsive chat interface for user interactions",
-      "Added context awareness for accurate product recommendations",
+      "Added context awareness for accurate product recommendations"
     ],
     duration: "Learning Project 2025",
-    startDate: parseDate("Jan 2025"),
+    startDate: parseDate("Jan 2025")
   },
   {
     id: 7,
@@ -152,39 +150,38 @@ const items: ProjectDetail[] = [
       "Optimized SQL queries achieving 20-30% performance improvement",
       "Built React PWA with offline-first capabilities",
       "Implemented real-time data updates using SignalR",
-      "Created ElasticSearch integration for fast searching",
+      "Created Elasticsearch integration for fast searching",
       "Built comprehensive monitoring and alerting system",
-      "Implemented auto-scaling and load balancing",
+      "Implemented auto-scaling and load balancing"
     ],
     duration: "Apr 2025 – Nov 2025",
-    startDate: parseDate("Apr 2025"),
-  },
-].sort((a, b) => b.startDate.getTime() - a.startDate.getTime())
+    startDate: parseDate("Apr 2025")
+  }
+].sort((a, b) => b.startDate.getTime() - a.startDate.getTime());
 
 const FloatingMenu: React.FC<{
-  projects: ProjectDetail[]
-  activeId: number | null
-  scrollToProject: (id: number) => void
+  projects: ProjectDetail[];
+  activeId: number | null;
+  scrollToProject: (id: number) => void;
 }> = ({ projects, activeId, scrollToProject }) => {
-  const [visible, setVisible] = useState(true)
-  const [lastScrollY, setLastScrollY] = useState(0)
-  const menuRef = useRef<HTMLDivElement>(null)
+  const [visible, setVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+  const menuRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
-      const currentScrollY = window.scrollY
-      // Only hide if scrolling down more than 100px
+      const currentScrollY = window.scrollY;
       if (currentScrollY > lastScrollY && currentScrollY > 100) {
-        setVisible(false)
+        setVisible(false);
       } else {
-        setVisible(true)
+        setVisible(true);
       }
-      setLastScrollY(currentScrollY)
-    }
+      setLastScrollY(currentScrollY);
+    };
 
-    window.addEventListener("scroll", handleScroll, { passive: true })
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [lastScrollY])
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY]);
 
   return (
     <div
@@ -202,7 +199,7 @@ const FloatingMenu: React.FC<{
                 onClick={() => scrollToProject(project.id)}
                 className={`flex items-center px-3 py-2 rounded-lg text-sm transition-colors w-full text-left ${
                   activeId === project.id
-                    ? "bg-purple-50 text-purple-800 font-medium border border-purple-200"
+                    ? "bg-indigo-50 text-indigo-800 font-medium border border-indigo-200"
                     : "text-gray-600 hover:bg-gray-50"
                 }`}
               >
@@ -213,20 +210,20 @@ const FloatingMenu: React.FC<{
         </ul>
       </div>
     </div>
-  )
-}
+  );
+};
 
 const ProjectCard: React.FC<{
-  project: ProjectDetail
-  onClick: () => void
+  project: ProjectDetail;
+  onClick: () => void;
 }> = ({ project, onClick }) => {
   return (
     <div
-      className="group relative bg-white rounded-lg shadow-md border border-gray-200 hover:bg-purple-50 transition-all duration-300 p-5 lg:w-fit sm:w-full m-5 mx-2 cursor-pointer"
+      className="group relative bg-white rounded-lg shadow-md border border-gray-200 hover:bg-indigo-50 transition-all duration-300 p-6 lg:w-fit sm:w-full m-5 mx-2 cursor-pointer"
       onClick={onClick}
     >
-      <h3 className="text-base font-semibold text-gray-800 group-hover:text-purple-700 mb-1">{project.name}</h3>
-      <div className="text-xs text-purple-600 font-medium mb-1">{project.duration}</div>
+      <h3 className="text-base font-semibold text-gray-800 group-hover:text-indigo-700 mb-1">{project.name}</h3>
+      <div className="text-xs text-indigo-600 font-medium mb-1">{project.duration}</div>
       {project.role && (
         <div className="text-xs text-gray-600 bg-gray-100 rounded px-2 py-0.5 inline-block mb-2">
           Role: {project.role}
@@ -236,7 +233,7 @@ const ProjectCard: React.FC<{
         {project.technologies?.slice(0, 4).map((tech, idx) => (
           <span
             key={idx}
-            className="bg-purple-50 text-purple-700 text-[11px] px-2 py-0.5 rounded-md group-hover:bg-purple-100 transition-colors"
+            className="bg-indigo-50 text-indigo-700 text-[11px] px-2 py-0.5 rounded-md group-hover:bg-indigo-100 transition-colors"
           >
             {tech}
           </span>
@@ -246,12 +243,12 @@ const ProjectCard: React.FC<{
         )}
       </div>
     </div>
-  )
-}
+  );
+};
 
 const ProjectDetails: React.FC<{
-  project: ProjectDetail
-  projectRef: React.RefObject<HTMLDivElement | null>
+  project: ProjectDetail;
+  projectRef: React.RefObject<HTMLDivElement | null>;
 }> = ({ project, projectRef }) => {
   return (
     <section ref={projectRef} className="scroll-mt-24 mb-12">
@@ -260,10 +257,10 @@ const ProjectDetails: React.FC<{
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
             <div>
               <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-1">{project.name}</h2>
-              <p className="text-purple-600 font-medium">{project.duration}</p>
+              <p className="text-indigo-600 font-medium">{project.duration}</p>
             </div>
             {project.role && (
-              <span className="bg-purple-100 text-purple-800 text-sm px-4 py-2 rounded-full font-medium">
+              <span className="bg-indigo-100 text-indigo-800 text-sm px-4 py-2 rounded-full font-medium">
                 {project.role}
               </span>
             )}
@@ -287,7 +284,7 @@ const ProjectDetails: React.FC<{
                 {project.technologies.map((tech, index) => (
                   <span
                     key={index}
-                    className="bg-gradient-to-br from-purple-50 to-purple-100 text-purple-800 text-sm px-3 py-1.5 rounded-lg shadow-sm border border-purple-100"
+                    className="bg-gradient-to-br from-indigo-50 to-indigo-100 text-indigo-800 text-sm px-3 py-1.5 rounded-lg shadow-sm border border-indigo-100"
                   >
                     {tech}
                   </span>
@@ -305,7 +302,7 @@ const ProjectDetails: React.FC<{
                 <li key={index} className="flex items-start">
                   <span className="flex-shrink-0 mt-1 mr-3">
                     <svg
-                      className="w-5 h-5 text-purple-500"
+                      className="w-5 h-5 text-indigo-500"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -327,34 +324,33 @@ const ProjectDetails: React.FC<{
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
 export const ProjectsShowcase: React.FC = () => {
-  const projectsLargeRef = useRef<HTMLDivElement>(null)
+  const projectsLargeRef = useRef<HTMLDivElement>(null);
 
   const scrollToProjectsLarge = (projectId: number) => {
     if (projectsLargeRef.current) {
-      projectsLargeRef.current.scrollIntoView({ behavior: "smooth" })
+      projectsLargeRef.current.scrollIntoView({ behavior: "smooth" });
 
-      // After scrolling to the projects section, find the specific project
       setTimeout(() => {
-        const projectElement = document.querySelector(`[data-project-id="${projectId}"]`)
+        const projectElement = document.querySelector(`[data-project-id="${projectId}"]`);
         if (projectElement) {
-          projectElement.scrollIntoView({ behavior: "smooth", block: "start" })
+          projectElement.scrollIntoView({ behavior: "smooth", block: "start" });
         }
-      }, 500)
+      }, 500);
     }
-  }
+  };
 
   return (
     <div className="w-full">
       <div className="mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            My <span className="text-purple-600">Project Portfolio</span>
+            My <span className="text-indigo-600">Project Portfolio</span>
           </h2>
-          <div className="w-24 h-1.5 bg-gradient-to-r from-purple-400 to-purple-600 mx-auto rounded-full mb-6"></div>
+          <div className="w-24 h-1.5 bg-gradient-to-r from-indigo-400 to-indigo-600 mx-auto rounded-full mb-6"></div>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             A collection of my professional work showcasing full-stack development expertise with modern technologies
           </p>
@@ -366,61 +362,61 @@ export const ProjectsShowcase: React.FC = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export const ProjectsShowcaseLarge: React.FC = () => {
-  const [activeId, setActiveId] = useState<number | null>(null)
-  const projectRefs = useRef(items.map(() => createRef<HTMLDivElement>()))
-  const observerRef = useRef<IntersectionObserver | null>(null)
+  const [activeId, setActiveId] = useState<number | null>(null);
+  const projectRefs = useRef(items.map(() => createRef<HTMLDivElement>()));
+  const observerRef = useRef<IntersectionObserver | null>(null);
 
   useEffect(() => {
     observerRef.current = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            const projectId = Number.parseInt(entry.target.getAttribute("data-project-id") || "0")
+            const projectId = Number.parseInt(entry.target.getAttribute("data-project-id") || "0");
             if (projectId) {
-              setActiveId(projectId)
+              setActiveId(projectId);
             }
           }
-        })
+        });
       },
-      { threshold: 0.5, rootMargin: "-100px 0px -100px 0px" },
-    )
+      { threshold: 0.5, rootMargin: "-100px 0px -100px 0px" }
+    );
 
-    const currentObserver = observerRef.current
+    const currentObserver = observerRef.current;
 
     projectRefs.current.forEach((ref, index) => {
       if (ref.current) {
-        ref.current.setAttribute("data-project-id", items[index].id.toString())
-        currentObserver.observe(ref.current)
+        ref.current.setAttribute("data-project-id", items[index].id.toString());
+        currentObserver.observe(ref.current);
       }
-    })
+    });
 
     return () => {
-      if (currentObserver) currentObserver.disconnect()
-    }
-  }, [])
+      if (currentObserver) currentObserver.disconnect();
+    };
+  }, []);
 
   const scrollToProject = (id: number) => {
-    const index = items.findIndex((item) => item.id === id)
+    const index = items.findIndex((item) => item.id === id);
     if (index !== -1 && projectRefs.current[index].current) {
       projectRefs.current[index].current?.scrollIntoView({
         behavior: "smooth",
-        block: "start",
-      })
+        block: "start"
+      });
     }
-  }
+  };
 
   return (
     <div className="w-full py-10 bg-gray-50 relative">
       <div className="mx-auto px-4 sm:px-6 lg:px-8 mt-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Project <span className="text-purple-600">Details</span>
+            Project <span className="text-indigo-600">Details</span>
           </h2>
-          <div className="w-24 h-1.5 bg-gradient-to-r from-purple-400 to-purple-600 mx-auto rounded-full mb-6"></div>
+          <div className="w-24 h-1.5 bg-gradient-to-r from-indigo-400 to-indigo-600 mx-auto rounded-full mb-6"></div>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Detailed view of my professional projects with technologies used and key contributions
           </p>
@@ -435,5 +431,5 @@ export const ProjectsShowcaseLarge: React.FC = () => {
       </div>
       <FloatingMenu projects={items} activeId={activeId} scrollToProject={scrollToProject} />
     </div>
-  )
-}
+  );
+};

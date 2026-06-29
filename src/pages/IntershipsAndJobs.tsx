@@ -1,7 +1,9 @@
 import { useState } from 'react';
+import PageShell from '../components/PageShell';
 import Internship from '../components/Internship';
 import WorkExperience from '../components/WorkExperience';
 import { FaBriefcase, FaUserGraduate } from 'react-icons/fa';
+import { PAGE_THEMES } from '../AppConstraint';
 
 const InternshipsAndJobs = () => {
   const [section, setSection] = useState<'all' | 'work' | 'internship'>('all');
@@ -9,7 +11,7 @@ const InternshipsAndJobs = () => {
   const tabClass = (active: boolean) => `
     flex items-center justify-center px-4 py-1.5 sm:px-5 sm:py-2 rounded-lg
     text-sm sm:text-base font-medium transition-all duration-200
-    ${active ? 'bg-purple-600 text-white' : 'text-gray-800 hover:bg-purple-100/60'}
+    ${active ? 'bg-orange-600 text-white' : 'text-gray-800 hover:bg-orange-100/60'}
   `;
 
   const renderContent = () => {
@@ -29,10 +31,10 @@ const InternshipsAndJobs = () => {
   };
 
   return (
-    <div className="relative min-h-screen py-12 px-4 sm:px-6 lg:px-8">
-      <div className="transition-all duration-300 ease-in-out">
-          {renderContent()}
-        </div>
+    <PageShell theme={PAGE_THEMES.work}>
+      <div className="relative transition-all duration-300 ease-in-out">
+        {renderContent()}
+      </div>
 
       {/* Floating Pill-Style Toggle Tabs */}
       <div className="
@@ -64,7 +66,7 @@ const InternshipsAndJobs = () => {
           <span className="hidden sm:inline">Work</span>
         </button>
       </div>
-    </div>
+    </PageShell>
   );
 };
 

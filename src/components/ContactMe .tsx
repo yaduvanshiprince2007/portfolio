@@ -1,4 +1,12 @@
+import React from "react";
 import { URLS } from "../AppConstraint";
+
+interface ContactCardProps {
+  icon: React.ReactNode;
+  title: string;
+  content: string;
+  href: string;
+}
 
 const ContactMe = () => {
     return (
@@ -56,7 +64,7 @@ const ContactMe = () => {
     );
 };
 
-const ContactCard = ({ icon, title, content, href }: any) => {
+const ContactCard = ({ icon, title, content, href }: ContactCardProps) => {
     return (
         <div className="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition duration-200 text-center">
             <div className="bg-purple-100 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-2">

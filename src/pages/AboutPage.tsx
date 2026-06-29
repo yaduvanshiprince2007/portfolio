@@ -1,14 +1,16 @@
 import React from "react";
+import PageShell from "../components/PageShell";
 import AboutHeader from "../components/AboutHeader";
 import ContactInfo from "../components/ContactInfo";
 import ProfessionalSummary from "../components/ProfessionalSummary";
 import EducationTimeline from "../components/EducationTimeline";
 import Certifications from "../components/Certifications";
 import KeyStrengths from "../components/KeyStrengths";
+import { PAGE_THEMES } from "../AppConstraint";
 
 const AboutPage: React.FC = () => {
   return (
-    <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 via-white to-purple-50">
+    <PageShell theme={PAGE_THEMES.about}>
       <div className="mx-auto max-w-4xl mt-10 space-y-8">
         <AboutHeader />
         <ContactInfo />
@@ -17,7 +19,7 @@ const AboutPage: React.FC = () => {
         <Certifications />
         <EducationTimeline />
       </div>
-    </div>
+    </PageShell>
   );
 };
 

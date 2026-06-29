@@ -1,8 +1,8 @@
 import { parentPort } from "worker_threads";
+import fs from "fs/promises";
 
 function getDocumentWord(): Promise<string> {
   const filePath = "./assets/Prince_Yadav.docx";
-  const fs = require("fs").promises;
   return fs.readFile(filePath, "utf-8");
 }
 
