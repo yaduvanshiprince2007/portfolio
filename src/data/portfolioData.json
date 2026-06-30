@@ -1,0 +1,967 @@
+{
+  "urls": {
+    "linkedin": "https://www.linkedin.com/in/prince-yadav-0b3267382",
+    "github": "https://github.com/princeghostme",
+    "whatsapp": "https://wa.me/917004571707",
+    "portfolio": "https://princeghostme.github.io/portfolio/"
+  },
+  "resume": {
+    "pdf": "https://prince-react-app-first.s3.eu-north-1.amazonaws.com/Prince_Yadav_CV.pdf",
+    "docx": "https://prince-react-app-first.s3.eu-north-1.amazonaws.com/Resume/Prince_Yadav_CV.docx"
+  },
+  "personal": {
+    "name": "Prince Yadav",
+    "title": "Full Stack .NET Developer",
+    "subtitle": "Senior Full Stack Software Engineer | .NET Core, Node.js, React, Angular",
+    "email": "yaduvanshiprince2007@gmail.com",
+    "phone": "+91-7004571707",
+    "location": "Bengaluru, Karnataka",
+    "summary": "Senior Full Stack Software Engineer with 5+ years of experience delivering enterprise-grade solutions across BFSI, Healthcare, FinTech, SaaS, and Insurance domains. Experienced in designing cloud-native, scalable, secure, and high-performance applications using .NET Core, ASP.NET Web API, Node.js, React, Angular, TypeScript, SQL Server, PostgreSQL, MongoDB, Redis, Azure, and AWS. Strong background in microservices, distributed systems, event-driven architecture, REST/gRPC APIs, SignalR, Docker, Kubernetes, CI/CD, authentication, caching, asynchronous processing, and AI-assisted development. Passionate about clean architecture, mentoring developers, solving complex engineering problems, optimizing performance, and building software that is maintainable, resilient, and scalable."
+  },
+  "experience": [
+    {
+      "id": 1,
+      "company": "Perficient India",
+      "location": "Bengaluru, Karnataka",
+      "position": "Senior Technical Consultant",
+      "clients": [
+        "LPL (BFSI)"
+      ],
+      "startDate": "June 2026",
+      "endDate": "Present",
+      "responsibilities": [
+        "Developed and maintained enterprise web applications using .NET Core and Angular.",
+        "Designed and developed REST APIs, enabling seamless integration with frontend modules and improving data flow efficiency.",
+        "Performed resiliency testing by simulating API failures and validating application stability.",
+        "Worked closely with business analysts, architects, QA engineers, and product owners to translate business requirements into technical solutions.",
+        "Designed reusable and maintainable software components following SOLID principles and clean architecture practices.",
+        "Built secure REST APIs with proper validation, authentication, authorization, and exception handling.",
+        "Optimized database queries, indexes, stored procedures, and API response times to improve application performance.",
+        "Implemented logging, monitoring, auditing, and centralized error handling to simplify production support.",
+        "Participated in Agile ceremonies including sprint planning, backlog grooming, daily stand-ups, reviews, and retrospectives.",
+        "Performed peer code reviews and mentored junior developers by promoting coding standards and best practices.",
+        "Created technical documentation, deployment guides, API specifications, and architecture diagrams.",
+        "Supported production deployments, release management, hotfixes, and root cause analysis for critical incidents.",
+        "Collaborated with DevOps teams to automate CI/CD pipelines and improve deployment reliability.",
+        "Integrated third-party APIs and enterprise services while maintaining security and scalability.",
+        "Worked with Git workflows, pull requests, branching strategies, and version control best practices."
+      ],
+      "techStack": [
+        ".NET Core",
+        "C#",
+        "Angular",
+        "SQL Server",
+        "MongoDB",
+        "AWS",
+        "REST APIs",
+        "CI/CD (GitHub Actions)",
+        "Redis",
+        "Git",
+        "GitHub",
+        "Swagger/OpenAPI",
+        "Postman",
+        "JWT Authentication",
+        "OAuth2",
+        "Serilog",
+        "xUnit",
+        "Agile/Scrum",
+        "Azure DevOps"
+      ]
+    },
+    {
+      "id": 2,
+      "company": "DynPro India",
+      "location": "Bengaluru, Karnataka",
+      "position": "Full Stack Developer",
+      "clients": [
+        "Deloitte (USI)",
+        "Takeda"
+      ],
+      "startDate": "Nov 2025",
+      "endDate": "June 2026",
+      "responsibilities": [
+        "Developed and maintained enterprise web applications using .NET Core and Angular.",
+        "Designed and developed REST APIs, enabling seamless integration with frontend modules and improving data flow efficiency.",
+        "Implemented Redis caching to improve performance and reduce database load.",
+        "Performed resiliency testing by simulating API failures and validating application stability.",
+        "Resolved production issues and enhanced application performance.",
+        "Worked closely with business analysts, architects, QA engineers, and product owners to translate business requirements into technical solutions.",
+        "Designed reusable and maintainable software components following SOLID principles and clean architecture practices.",
+        "Built secure REST APIs with proper validation, authentication, authorization, and exception handling.",
+        "Optimized database queries, indexes, stored procedures, and API response times to improve application performance.",
+        "Implemented logging, monitoring, auditing, and centralized error handling to simplify production support.",
+        "Participated in Agile ceremonies including sprint planning, backlog grooming, daily stand-ups, reviews, and retrospectives.",
+        "Performed peer code reviews and mentored junior developers by promoting coding standards and best practices.",
+        "Created technical documentation, deployment guides, API specifications, and architecture diagrams.",
+        "Supported production deployments, release management, hotfixes, and root cause analysis for critical incidents.",
+        "Collaborated with DevOps teams to automate CI/CD pipelines and improve deployment reliability.",
+        "Integrated third-party APIs and enterprise services while maintaining security and scalability.",
+        "Worked with Git workflows, pull requests, branching strategies, and version control best practices."
+      ],
+      "techStack": [
+        ".NET Core",
+        "C#",
+        "Angular",
+        "SQL Server",
+        "MongoDB",
+        "AWS",
+        "REST APIs",
+        "CI/CD (GitHub Actions)",
+        "Redis",
+        "Git",
+        "GitHub",
+        "Swagger/OpenAPI",
+        "Postman",
+        "JWT Authentication",
+        "OAuth2",
+        "Serilog",
+        "xUnit",
+        "Agile/Scrum",
+        "Azure DevOps"
+      ]
+    },
+    {
+      "id": 3,
+      "company": "Aaneel Infotech",
+      "location": "Bengaluru, Karnataka",
+      "position": "Full Stack Developer (Software Developer / Assistant Lead)",
+      "clients": [
+        "US-based Healthcare & Insurance platform",
+        "Wellbe Health"
+      ],
+      "startDate": "Apr 2025",
+      "endDate": "Nov 2025",
+      "responsibilities": [
+        "Led backend and frontend development for healthcare clients (notably Wellbe Health) to deliver secure and scalable cloud-based applications.",
+        "Designed and optimized REST APIs in .NET Core and Express.js, ensuring high availability and 30% faster data throughput.",
+        "Built and integrated a Progressive Web App (PWA) into React, enabling cross-platform accessibility and offline sync.",
+        "Implemented IMO search, version master control, and CDN-based delta updates for content optimization.",
+        "Mentored junior developers and conducted code reviews to maintain best practices and architectural standards.",
+        "Worked closely with business analysts, architects, QA engineers, and product owners to translate business requirements into technical solutions.",
+        "Designed reusable and maintainable software components following SOLID principles and clean architecture practices.",
+        "Built secure REST APIs with proper validation, authentication, authorization, and exception handling.",
+        "Optimized database queries, indexes, stored procedures, and API response times to improve application performance.",
+        "Implemented logging, monitoring, auditing, and centralized error handling to simplify production support.",
+        "Participated in Agile ceremonies including sprint planning, backlog grooming, daily stand-ups, reviews, and retrospectives.",
+        "Performed peer code reviews and mentored junior developers by promoting coding standards and best practices.",
+        "Created technical documentation, deployment guides, API specifications, and architecture diagrams.",
+        "Supported production deployments, release management, hotfixes, and root cause analysis for critical incidents.",
+        "Collaborated with DevOps teams to automate CI/CD pipelines and improve deployment reliability.",
+        "Integrated third-party APIs and enterprise services while maintaining security and scalability.",
+        "Worked with Git workflows, pull requests, branching strategies, and version control best practices."
+      ],
+      "techStack": [
+        ".NET Core",
+        "C#",
+        "React.js",
+        "Azure",
+        "SQL Server",
+        "PostgreSQL",
+        "REST API",
+        "HTML/CSS",
+        "CI/CD (Azure DevOps)",
+        "PWA",
+        "Git",
+        "GitHub",
+        "Swagger/OpenAPI",
+        "Postman",
+        "JWT Authentication",
+        "OAuth2",
+        "Serilog",
+        "xUnit",
+        "Agile/Scrum",
+        "Azure DevOps"
+      ]
+    },
+    {
+      "id": 4,
+      "company": "MITS Global",
+      "location": "Bengaluru, Karnataka",
+      "position": "Full Stack Developer (Software Developer / Assistant Lead)",
+      "clients": [
+        "Nuvama (FinTech)"
+      ],
+      "startDate": "Dec 2023",
+      "endDate": "Mar 2025",
+      "responsibilities": [
+        "Collaborated with Nuvama (FinTech) to design, develop, and deploy enterprise-grade financial applications.",
+        "Engineered high-performance APIs in .NET Core, reducing response latency by 30%.",
+        "Developed interactive React dashboards integrated with AWS-hosted services.",
+        "Utilized AWS Lambda and S3 for event-driven data handling and secure file management.",
+        "Built Python-based analytics dashboards to extract insights from system and user metrics.",
+        "Enhanced authentication, API wrappers, and login modules for higher security and performance.",
+        "Managed production deployments with zero downtime, overseeing release readiness and hotfixes.",
+        "Acted as team lead proxy, handling sprint planning, stakeholder communication, and requirement analysis.",
+        "Worked closely with business analysts, architects, QA engineers, and product owners to translate business requirements into technical solutions.",
+        "Designed reusable and maintainable software components following SOLID principles and clean architecture practices.",
+        "Built secure REST APIs with proper validation, authentication, authorization, and exception handling.",
+        "Optimized database queries, indexes, stored procedures, and API response times to improve application performance.",
+        "Implemented logging, monitoring, auditing, and centralized error handling to simplify production support.",
+        "Participated in Agile ceremonies including sprint planning, backlog grooming, daily stand-ups, reviews, and retrospectives.",
+        "Performed peer code reviews and mentored junior developers by promoting coding standards and best practices.",
+        "Created technical documentation, deployment guides, API specifications, and architecture diagrams.",
+        "Supported production deployments, release management, hotfixes, and root cause analysis for critical incidents.",
+        "Collaborated with DevOps teams to automate CI/CD pipelines and improve deployment reliability.",
+        "Integrated third-party APIs and enterprise services while maintaining security and scalability.",
+        "Worked with Git workflows, pull requests, branching strategies, and version control best practices."
+      ],
+      "techStack": [
+        ".NET Core",
+        "C#",
+        "React.js",
+        "AWS (EC2, S3, Lambda, RDS)",
+        "SQL Server",
+        "REST APIs",
+        "Python",
+        "API Security",
+        "CI/CD Pipelines",
+        "Git",
+        "GitHub",
+        "Swagger/OpenAPI",
+        "Postman",
+        "JWT Authentication",
+        "OAuth2",
+        "Serilog",
+        "xUnit",
+        "Agile/Scrum",
+        "Azure DevOps"
+      ]
+    },
+    {
+      "id": 5,
+      "company": "Enaviya Information Technologies",
+      "location": "Bengaluru, Karnataka",
+      "position": "Software Developer",
+      "clients": [
+        "SIS",
+        "AU Bank",
+        "Ashirwad"
+      ],
+      "startDate": "Feb 2022",
+      "endDate": "Dec 2023",
+      "responsibilities": [
+        "Delivered end-to-end enterprise applications using .NET Core API, Angular, and SQL/PostgreSQL.",
+        "Designed reusable service APIs and modular components, improving maintainability and scalability.",
+        "Partnered with SIS and AU Bank to implement secure authentication and financial workflows.",
+        "Developed and maintained SharePoint solutions (workflows, CAML queries, timer jobs) for Ashirwad.",
+        "Worked closely with business analysts, architects, QA engineers, and product owners to translate business requirements into technical solutions.",
+        "Designed reusable and maintainable software components following SOLID principles and clean architecture practices.",
+        "Built secure REST APIs with proper validation, authentication, authorization, and exception handling.",
+        "Optimized database queries, indexes, stored procedures, and API response times to improve application performance.",
+        "Implemented logging, monitoring, auditing, and centralized error handling to simplify production support.",
+        "Participated in Agile ceremonies including sprint planning, backlog grooming, daily stand-ups, reviews, and retrospectives.",
+        "Performed peer code reviews and mentored junior developers by promoting coding standards and best practices.",
+        "Created technical documentation, deployment guides, API specifications, and architecture diagrams.",
+        "Supported production deployments, release management, hotfixes, and root cause analysis for critical incidents.",
+        "Collaborated with DevOps teams to automate CI/CD pipelines and improve deployment reliability.",
+        "Integrated third-party APIs and enterprise services while maintaining security and scalability.",
+        "Worked with Git workflows, pull requests, branching strategies, and version control best practices."
+      ],
+      "techStack": [
+        ".NET Core MVC",
+        "C#",
+        "Angular",
+        "SQL Server",
+        "PostgreSQL",
+        "REST APIs",
+        "SharePoint",
+        "AWS",
+        "Azure",
+        "Git",
+        "GitHub",
+        "Swagger/OpenAPI",
+        "Postman",
+        "JWT Authentication",
+        "OAuth2",
+        "Serilog",
+        "xUnit",
+        "Agile/Scrum",
+        "Azure DevOps"
+      ]
+    },
+    {
+      "id": 6,
+      "company": "Add Innovation",
+      "location": "Noida",
+      "position": "Full Stack Developer (Trainee / Junior Developer)",
+      "clients": [],
+      "startDate": "Aug 2021",
+      "endDate": "Dec 2021",
+      "responsibilities": [
+        "Contributed to an AI/ML-driven image processing system for automated quality inspection.",
+        "Built UI interfaces and integrated data workflows using PostgreSQL and Windows Forms.",
+        "Developed Python-based analytics dashboards to monitor performance and usage trends.",
+        "Collaborated with cross-functional hardware/software teams to enhance reliability and achieve a 25% faster inspection cycle.",
+        "Worked closely with business analysts, architects, QA engineers, and product owners to translate business requirements into technical solutions.",
+        "Designed reusable and maintainable software components following SOLID principles and clean architecture practices.",
+        "Built secure REST APIs with proper validation, authentication, authorization, and exception handling.",
+        "Optimized database queries, indexes, stored procedures, and API response times to improve application performance.",
+        "Implemented logging, monitoring, auditing, and centralized error handling to simplify production support.",
+        "Participated in Agile ceremonies including sprint planning, backlog grooming, daily stand-ups, reviews, and retrospectives.",
+        "Performed peer code reviews and mentored junior developers by promoting coding standards and best practices.",
+        "Created technical documentation, deployment guides, API specifications, and architecture diagrams.",
+        "Supported production deployments, release management, hotfixes, and root cause analysis for critical incidents.",
+        "Collaborated with DevOps teams to automate CI/CD pipelines and improve deployment reliability.",
+        "Integrated third-party APIs and enterprise services while maintaining security and scalability.",
+        "Worked with Git workflows, pull requests, branching strategies, and version control best practices."
+      ],
+      "techStack": [
+        "C#",
+        ".NET Framework",
+        "Python",
+        "PostgreSQL",
+        "WinForms",
+        "Data Analytics",
+        "Image Processing",
+        "Git",
+        "GitHub",
+        "Swagger/OpenAPI",
+        "Postman",
+        "JWT Authentication",
+        "OAuth2",
+        "Serilog",
+        "xUnit",
+        "Agile/Scrum",
+        "Azure DevOps"
+      ]
+    }
+  ],
+  "internships": [
+    {
+      "id": 1,
+      "company": "Hindalco",
+      "location": "Renukoot, UP",
+      "position": "IT Trainee",
+      "startDate": "Feb 2021",
+      "endDate": "Jul 2021",
+      "responsibilities": [
+        "Supported development of an updated Employee Management System, enhancing operational efficiency.",
+        "Delivered system migration 6 months ahead of schedule by aligning closely with IT and HR stakeholders.",
+        "Conducted requirement analysis, system integration, and user training to ensure smooth adoption.",
+        "Worked collaboratively with senior engineers while following coding standards and documentation practices.",
+        "Participated in testing, debugging, demonstrations, and deployment activities."
+      ]
+    },
+    {
+      "id": 2,
+      "company": "Lithoera Technology",
+      "location": "Bengaluru, Karnataka",
+      "position": "Full Stack Intern (Team Lead)",
+      "startDate": "Aug 2020",
+      "endDate": "Dec 2020",
+      "responsibilities": [
+        "Led a 4-member team for an IoT-based government project, delivering innovative solutions.",
+        "Enhanced backend services using Python and REST APIs, ensuring smooth IoT-device integration.",
+        "Published research in IJSRD, Vol-8 Issue 10, Dec-2020, highlighting system architecture and results.",
+        "Worked collaboratively with senior engineers while following coding standards and documentation practices.",
+        "Participated in testing, debugging, demonstrations, and deployment activities."
+      ]
+    },
+    {
+      "id": 3,
+      "company": "PIALGO Solutions",
+      "location": "Ranchi, Jharkhand",
+      "position": "UI/UX Frontend Trainee",
+      "startDate": "Feb 2018",
+      "endDate": "Dec 2019",
+      "responsibilities": [
+        "Delivered UI modules for enterprise projects with focus on usability, accessibility, and responsiveness.",
+        "Collaborated with designers and developers to translate mockups into interactive components.",
+        "Built reusable frontend components with HTML, CSS, and JavaScript, Angular and React.",
+        "Worked collaboratively with senior engineers while following coding standards and documentation practices.",
+        "Participated in testing, debugging, demonstrations, and deployment activities."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "name": "AI-Powered Document Analyzer",
+      "description": "Enterprise-grade PDF parsing and AI-based summarization application designed with a microservices architecture. Integrated RAG (Retrieval-Augmented Generation) patterns, OpenAI API, and semantic searching for automated file summaries. The solution emphasizes scalability, maintainability, security, observability, and enterprise software engineering best practices while supporting future feature expansion.",
+      "technologies": [
+        "React",
+        "ASP.NET Core",
+        "Python",
+        "Microservices",
+        "JWT Authentication",
+        "PDF Parsing",
+        "AI Summarization",
+        "RAG Pipeline",
+        "Git",
+        "Swagger/OpenAPI",
+        "Docker",
+        "CI/CD",
+        "Unit Testing"
+      ],
+      "role": "Full Stack Developer",
+      "feature": [
+        "Built using React, ASP.NET Core, and Python",
+        "Implemented PDF parsing and AI-based summarization",
+        "Designed microservices architecture with JWT authentication",
+        "Configured LangChain and OpenAI vectors for high-efficiency semantic document lookups",
+        "Implemented JWT authentication with role-based authorization.",
+        "Built responsive and reusable UI components following modern design principles.",
+        "Applied repository pattern, dependency injection, and clean architecture.",
+        "Integrated Swagger/OpenAPI documentation for all backend services.",
+        "Implemented structured logging and centralized exception handling.",
+        "Added input validation and security best practices to prevent common vulnerabilities.",
+        "Developed reusable utility libraries to reduce duplicate code.",
+        "Optimized application performance through caching and asynchronous processing.",
+        "Configured CI/CD pipelines for automated build, testing, and deployment.",
+        "Designed scalable database schemas with optimized indexing strategies.",
+        "Implemented environment-specific configuration and secret management.",
+        "Improved maintainability through modular architecture and reusable services."
+      ],
+      "duration": "Dec 2025",
+      "startDate": "Dec 2025"
+    },
+    {
+      "id": 2,
+      "name": "Microservices API Platform",
+      "description": "High-throughput distributed API gateway and microservices platform optimizing service integration and system resilience. Optimized backend service communication using gRPC, SignalR, and Kafka message broadcasting. The solution emphasizes scalability, maintainability, security, observability, and enterprise software engineering best practices while supporting future feature expansion.",
+      "technologies": [
+        ".NET Core",
+        "Node.js",
+        "API Gateway",
+        "Rate Limiting",
+        "Retry Policies",
+        "Asynchronous Messaging",
+        "RabbitMQ",
+        "gRPC",
+        "SignalR",
+        "Git",
+        "Swagger/OpenAPI",
+        "Docker",
+        "CI/CD",
+        "Unit Testing"
+      ],
+      "role": "Backend Architect",
+      "feature": [
+        "Developed distributed system using .NET Core and Node.js",
+        "Implemented API Gateway, rate limiting, retry policies",
+        "Integrated asynchronous messaging and pub-sub flows with Kafka and RabbitMQ",
+        "Implemented JWT authentication with role-based authorization.",
+        "Built responsive and reusable UI components following modern design principles.",
+        "Applied repository pattern, dependency injection, and clean architecture.",
+        "Integrated Swagger/OpenAPI documentation for all backend services.",
+        "Implemented structured logging and centralized exception handling.",
+        "Added input validation and security best practices to prevent common vulnerabilities.",
+        "Developed reusable utility libraries to reduce duplicate code.",
+        "Optimized application performance through caching and asynchronous processing.",
+        "Configured CI/CD pipelines for automated build, testing, and deployment.",
+        "Designed scalable database schemas with optimized indexing strategies.",
+        "Implemented environment-specific configuration and secret management.",
+        "Improved maintainability through modular architecture and reusable services."
+      ],
+      "duration": "Oct 2025",
+      "startDate": "Oct 2025"
+    },
+    {
+      "id": 3,
+      "name": "Full Stack SaaS Application",
+      "description": "MERN-based SaaS solution with containerized services and fully automated continuous deployment pipeline. The solution emphasizes scalability, maintainability, security, observability, and enterprise software engineering best practices while supporting future feature expansion.",
+      "technologies": [
+        "React",
+        "Node.js",
+        "MongoDB",
+        "Express.js",
+        ".NET Services",
+        "Docker",
+        "Kubernetes",
+        "CI/CD Actions",
+        "Git",
+        "Swagger/OpenAPI",
+        "CI/CD",
+        "Unit Testing"
+      ],
+      "role": "DevOps & Full Stack Engineer",
+      "feature": [
+        "Built MERN-based application with .NET backend services",
+        "Containerized applications using Docker and deployed via Kubernetes",
+        "Automated CI/CD pipelines for continuous delivery",
+        "Implemented JWT authentication with role-based authorization.",
+        "Built responsive and reusable UI components following modern design principles.",
+        "Applied repository pattern, dependency injection, and clean architecture.",
+        "Integrated Swagger/OpenAPI documentation for all backend services.",
+        "Implemented structured logging and centralized exception handling.",
+        "Added input validation and security best practices to prevent common vulnerabilities.",
+        "Developed reusable utility libraries to reduce duplicate code.",
+        "Optimized application performance through caching and asynchronous processing.",
+        "Configured CI/CD pipelines for automated build, testing, and deployment.",
+        "Designed scalable database schemas with optimized indexing strategies.",
+        "Implemented environment-specific configuration and secret management.",
+        "Improved maintainability through modular architecture and reusable services."
+      ],
+      "duration": "Aug 2025",
+      "startDate": "Aug 2025"
+    },
+    {
+      "id": 4,
+      "name": "Bulk File Processing System",
+      "description": "Async file processing system with queue-based architecture for handling large-scale data imports. Implemented real-time status updates and progress tracking. The solution emphasizes scalability, maintainability, security, observability, and enterprise software engineering best practices while supporting future feature expansion.",
+      "technologies": [
+        "Node.js",
+        "AWS SQS",
+        "AWS Lambda",
+        "React",
+        "WebSockets",
+        "PostgreSQL",
+        "Git",
+        "Swagger/OpenAPI",
+        "Docker",
+        "CI/CD",
+        "Unit Testing"
+      ],
+      "role": "Full Stack Developer",
+      "feature": [
+        "Built async queue-based architecture for scalable file processing",
+        "Implemented real-time status updates using WebSockets",
+        "Created React dashboard for monitoring processing jobs",
+        "Optimized memory usage for handling large file uploads",
+        "Built error handling and retry mechanisms",
+        "Implemented JWT authentication with role-based authorization.",
+        "Built responsive and reusable UI components following modern design principles.",
+        "Applied repository pattern, dependency injection, and clean architecture.",
+        "Integrated Swagger/OpenAPI documentation for all backend services.",
+        "Implemented structured logging and centralized exception handling.",
+        "Added input validation and security best practices to prevent common vulnerabilities.",
+        "Developed reusable utility libraries to reduce duplicate code.",
+        "Optimized application performance through caching and asynchronous processing.",
+        "Configured CI/CD pipelines for automated build, testing, and deployment.",
+        "Designed scalable database schemas with optimized indexing strategies.",
+        "Implemented environment-specific configuration and secret management.",
+        "Improved maintainability through modular architecture and reusable services."
+      ],
+      "duration": "2024",
+      "startDate": "Oct 2024"
+    },
+    {
+      "id": 5,
+      "name": "Real-Time Chat Application",
+      "description": "Full-stack chat system with real-time messaging, search capabilities, and file sharing. Built using React frontend with WebSockets and PostgreSQL backend. The solution emphasizes scalability, maintainability, security, observability, and enterprise software engineering best practices while supporting future feature expansion.",
+      "technologies": [
+        "React",
+        "Node.js",
+        "WebSockets",
+        "PostgreSQL",
+        "Redux",
+        "Express.js",
+        "Git",
+        "Swagger/OpenAPI",
+        "Docker",
+        "CI/CD",
+        "Unit Testing"
+      ],
+      "role": "Full Stack Developer",
+      "feature": [
+        "Implemented real-time messaging using WebSockets and Socket.io",
+        "Built full-text search functionality for message history",
+        "Created file sharing and attachment capabilities",
+        "Implemented user presence and typing indicators",
+        "Implemented JWT authentication with role-based authorization.",
+        "Built responsive and reusable UI components following modern design principles.",
+        "Applied repository pattern, dependency injection, and clean architecture.",
+        "Integrated Swagger/OpenAPI documentation for all backend services.",
+        "Implemented structured logging and centralized exception handling.",
+        "Added input validation and security best practices to prevent common vulnerabilities.",
+        "Developed reusable utility libraries to reduce duplicate code.",
+        "Optimized application performance through caching and asynchronous processing.",
+        "Configured CI/CD pipelines for automated build, testing, and deployment.",
+        "Designed scalable database schemas with optimized indexing strategies.",
+        "Implemented environment-specific configuration and secret management.",
+        "Improved maintainability through modular architecture and reusable services."
+      ],
+      "duration": "2024",
+      "startDate": "Jun 2024"
+    },
+    {
+      "id": 6,
+      "name": "Task Management System (Kanban)",
+      "description": "Full-stack task management application with Kanban board interface, role-based access control, and real-time updates for team collaboration. The solution emphasizes scalability, maintainability, security, observability, and enterprise software engineering best practices while supporting future feature expansion.",
+      "technologies": [
+        "React",
+        ".NET Core",
+        "TypeScript",
+        "SQL Server",
+        "SignalR",
+        "Redux",
+        "Git",
+        "Swagger/OpenAPI",
+        "Docker",
+        "CI/CD",
+        "Unit Testing"
+      ],
+      "role": "Full Stack Developer",
+      "feature": [
+        "Designed Kanban board interface with drag-and-drop functionality",
+        "Implemented role-based access control and permissions",
+        "Built real-time updates using SignalR for team collaboration",
+        "Created task filtering and search capabilities",
+        "Implemented JWT authentication with role-based authorization.",
+        "Built responsive and reusable UI components following modern design principles.",
+        "Applied repository pattern, dependency injection, and clean architecture.",
+        "Integrated Swagger/OpenAPI documentation for all backend services.",
+        "Implemented structured logging and centralized exception handling.",
+        "Added input validation and security best practices to prevent common vulnerabilities.",
+        "Developed reusable utility libraries to reduce duplicate code.",
+        "Optimized application performance through caching and asynchronous processing.",
+        "Configured CI/CD pipelines for automated build, testing, and deployment.",
+        "Designed scalable database schemas with optimized indexing strategies.",
+        "Implemented environment-specific configuration and secret management.",
+        "Improved maintainability through modular architecture and reusable services."
+      ],
+      "duration": "2024",
+      "startDate": "May 2024"
+    },
+    {
+      "id": 7,
+      "name": "High-Concurrency Healthcare Platform",
+      "description": "Healthcare SaaS platform built for supporting ~10K concurrent users. Developed scalable workflows with HIPAA compliance standards, ensuring secure patient record handling. The solution emphasizes scalability, maintainability, security, observability, and enterprise software engineering best practices while supporting future feature expansion.",
+      "technologies": [
+        "React",
+        ".NET Core",
+        "PostgreSQL",
+        "Redis",
+        "Elasticsearch",
+        "SignalR",
+        "Git",
+        "Swagger/OpenAPI",
+        "Docker",
+        "CI/CD",
+        "Unit Testing"
+      ],
+      "role": "Full Stack Developer",
+      "feature": [
+        "Architected system for handling 10K+ concurrent users",
+        "Implemented Redis caching strategy reducing database load by 70%",
+        "Optimized SQL queries achieving 20-30% performance improvement",
+        "Built React PWA with offline-first capabilities",
+        "Implemented JWT authentication with role-based authorization.",
+        "Built responsive and reusable UI components following modern design principles.",
+        "Applied repository pattern, dependency injection, and clean architecture.",
+        "Integrated Swagger/OpenAPI documentation for all backend services.",
+        "Implemented structured logging and centralized exception handling.",
+        "Added input validation and security best practices to prevent common vulnerabilities.",
+        "Developed reusable utility libraries to reduce duplicate code.",
+        "Optimized application performance through caching and asynchronous processing.",
+        "Configured CI/CD pipelines for automated build, testing, and deployment.",
+        "Designed scalable database schemas with optimized indexing strategies.",
+        "Implemented environment-specific configuration and secret management.",
+        "Improved maintainability through modular architecture and reusable services."
+      ],
+      "duration": "2025",
+      "startDate": "Apr 2025"
+    }
+  ],
+  "skills": {
+    "programmingLanguages": [
+      "C#",
+      "JavaScript",
+      "TypeScript",
+      "Python",
+      "SQL",
+      "NoSQL",
+      "C/C++",
+      "Shell Scripting"
+    ],
+    "frontend": [
+      "React",
+      "Next.js",
+      "Angular",
+      "Redux",
+      "HTML5",
+      "CSS3",
+      "Tailwind CSS",
+      "Bootstrap",
+      "Material UI",
+      "PWA"
+    ],
+    "backend": [
+      "ASP.NET Core",
+      "Web API",
+      "Node.js",
+      "Express.js",
+      "Entity Framework Core",
+      "ASP.NET MVC",
+      "SignalR"
+    ],
+    "architecture": [
+      "Microservices",
+      "Distributed Systems",
+      "Event-Driven Architecture",
+      "System Design",
+      "Scalability",
+      "High Availability",
+      "Fault Tolerance",
+      "CQRS Pattern",
+      "API Gateway"
+    ],
+    "apis": [
+      "REST",
+      "gRPC",
+      "GraphQL",
+      "WebSockets",
+      "OAuth2",
+      "JWT"
+    ],
+    "databases": [
+      "SQL Server",
+      "PostgreSQL",
+      "MongoDB",
+      "Redis",
+      "Cosmos DB",
+      "Elasticsearch"
+    ],
+    "cloudDevOps": [
+      "AWS",
+      "Azure",
+      "Docker",
+      "Kubernetes",
+      "CI/CD (GitHub Actions, Azure DevOps, Jenkins)"
+    ]
+  },
+  "detailedSkills": [
+    {
+      "category": "Languages",
+      "items": [
+        {
+          "name": "C#",
+          "level": "Advanced"
+        },
+        {
+          "name": "TypeScript",
+          "level": "Advanced"
+        },
+        {
+          "name": "JavaScript",
+          "level": "Advanced"
+        },
+        {
+          "name": "Python",
+          "level": "Intermediate"
+        },
+        {
+          "name": "SQL",
+          "level": "Advanced"
+        }
+      ]
+    },
+    {
+      "category": "Backend Frameworks",
+      "items": [
+        {
+          "name": "ASP.NET Core",
+          "level": "Advanced"
+        },
+        {
+          "name": "Node.js",
+          "level": "Advanced"
+        },
+        {
+          "name": "Express.js",
+          "level": "Advanced"
+        },
+        {
+          "name": "Entity Framework Core",
+          "level": "Advanced"
+        }
+      ]
+    },
+    {
+      "category": "Frontend Frameworks",
+      "items": [
+        {
+          "name": "React",
+          "level": "Advanced"
+        },
+        {
+          "name": "Angular",
+          "level": "Advanced"
+        },
+        {
+          "name": "Next.js",
+          "level": "Intermediate"
+        },
+        {
+          "name": "Redux",
+          "level": "Advanced"
+        }
+      ]
+    },
+    {
+      "category": "APIs & Protocols",
+      "items": [
+        {
+          "name": "REST APIs",
+          "level": "Advanced"
+        },
+        {
+          "name": "GraphQL",
+          "level": "Intermediate"
+        },
+        {
+          "name": "gRPC",
+          "level": "Basic"
+        },
+        {
+          "name": "WebSockets",
+          "level": "Advanced"
+        },
+        {
+          "name": "SignalR",
+          "level": "Advanced"
+        }
+      ]
+    },
+    {
+      "category": "Databases",
+      "items": [
+        {
+          "name": "SQL Server",
+          "level": "Advanced"
+        },
+        {
+          "name": "PostgreSQL",
+          "level": "Advanced"
+        },
+        {
+          "name": "MongoDB",
+          "level": "Advanced"
+        },
+        {
+          "name": "Redis",
+          "level": "Advanced"
+        },
+        {
+          "name": "Cosmos DB",
+          "level": "Intermediate"
+        }
+      ]
+    },
+    {
+      "category": "Cloud & Infrastructure",
+      "items": [
+        {
+          "name": "Azure App Services",
+          "level": "Advanced"
+        },
+        {
+          "name": "Azure Functions",
+          "level": "Advanced"
+        },
+        {
+          "name": "AWS EC2/S3/Lambda/RDS",
+          "level": "Intermediate"
+        },
+        {
+          "name": "Docker",
+          "level": "Intermediate"
+        },
+        {
+          "name": "Kubernetes",
+          "level": "Basic"
+        }
+      ]
+    }
+  ],
+  "additionalSkills": [
+    "Microservices Architecture",
+    "Distributed Systems",
+    "Event-Driven Architecture",
+    "System Design",
+    "Scalability",
+    "High Availability",
+    "Fault Tolerance",
+    "CQRS Pattern",
+    "API Gateway",
+    "Query Optimization",
+    "Caching Strategies",
+    "Asynchronous Processing",
+    "Rate Limiting & Throttling",
+    "High Concurrency",
+    "Real-time Data Updates",
+    "AI-Assisted Features",
+    "RAG (Retrieval-Augmented Generation)",
+    "LLM API Integration",
+    "Agile & Scrum",
+    "SOLID Principles",
+    "Team Mentoring",
+    "Requirements Analysis",
+    "Clean Architecture",
+    "Design Patterns",
+    "Dependency Injection",
+    "Repository Pattern",
+    "Unit Testing",
+    "Integration Testing",
+    "Performance Optimization",
+    "Memory Optimization",
+    "Application Security",
+    "API Versioning",
+    "OpenAPI",
+    "Message Queues",
+    "RabbitMQ",
+    "Kafka",
+    "Azure Service Bus",
+    "Background Services",
+    "Distributed Caching",
+    "Redis Cache",
+    "Feature Flags",
+    "Observability",
+    "Prometheus",
+    "Grafana",
+    "Elastic Stack",
+    "Technical Leadership",
+    "Stakeholder Communication",
+    "Requirement Analysis"
+  ],
+  "education": [
+    {
+      "id": 1,
+      "startDate": "2019",
+      "endDate": "2021",
+      "degree": "Master of Computer Application (MCA)",
+      "university": "Reva University, Bangalore",
+      "gpa": "8.2 GPA",
+      "description": "Focused on advanced programming, software development methodologies, and optimization techniques."
+    },
+    {
+      "id": 2,
+      "startDate": "2016",
+      "endDate": "2019",
+      "degree": "Bachelor of Computer Application (BCA)",
+      "university": "ICFAI University, Bangalore",
+      "gpa": "7.3 GPA",
+      "description": "Gained solid foundation in programming, algorithms, and database management."
+    },
+    {
+      "id": 3,
+      "startDate": "2015",
+      "endDate": "2016",
+      "degree": "Higher Secondary Education (Physics, Chemistry, Mathematics)",
+      "university": "Army Public School, CBSE Board",
+      "gpa": "7 CGPA",
+      "description": "Completed higher secondary education with strong analytical and problem-solving skills."
+    },
+    {
+      "id": 4,
+      "startDate": "2012",
+      "endDate": "2013",
+      "degree": "Middle School Education",
+      "university": "Army Public School, CBSE Board",
+      "gpa": "7.2 CGPA",
+      "description": "Completed middle school with a broad curriculum, laying groundwork for future studies."
+    }
+  ],
+  "certifications": [
+    "Full Stack Web Development – Udemy",
+    "ASP.NET Core React Advanced – Udemy",
+    "Python for Data Science AI – Udemy",
+    "CI/CD with Azure DevOps – Udemy",
+    "Microsoft Azure Fundamentals – Udemy",
+    "Generative AI with .NET – Udemy"
+  ],
+  "languages": [
+    "English",
+    "Hindi"
+  ]
+}

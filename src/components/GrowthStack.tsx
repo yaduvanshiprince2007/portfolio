@@ -1,3 +1,5 @@
+import { RESUME_DATA } from "../AppConstraint";
+
 interface GrowthData {
   year: string;
   title: string;
@@ -7,45 +9,33 @@ interface GrowthData {
 }
 
 const GrowthStack = () => {
-  const growthData: GrowthData[] = [
-    {
-      year: "2025",
-      title: "Senior Software Developer",
-      company: "DynPro India",
-      duration: "Nov 2025 - Present",
-      description: "Microservices migration, API Gateway, Entra ID auth"
-    },
-    {
-      year: "2025",
-      title: "Software Developer",
-      company: "Aaneel Infotech",
-      duration: "Apr 2025 - Nov 2025",
-      description: "Healthcare SaaS, 10K+ concurrent users"
-    },
-    {
-      year: "2023",
-      title: "Software Developer",
-      company: "MITS Global",
-      duration: "Dec 2023 - Mar 2025",
-      description: "Fintech platform, Performance optimization (20-30%)"
-    },
-    {
-      year: "2022",
-      title: "Junior Software Developer",
-      company: "Enaviya IT",
-      duration: "Feb 2022 - Dec 2023",
-      description: "Enterprise applications, UI Performance"
-    },
-    {
-      year: "2021",
-      title: "Software Developer Trainee",
-      company: "Add Innovation",
-      duration: "Aug 2021 - Dec 2021",
-      description: "AI-based inspection system, Python + .NET"
+  const experiences = RESUME_DATA.experience;
+  
+  const growthData: GrowthData[] = experiences.map((exp) => {
+    let year = "2025";
+    const yearMatch = exp.startDate.match(/\b\d{4}\b/);
+    if (yearMatch) {
+      year = yearMatch[0];
+    } else if (exp.endDate.includes("Present")) {
+      year = "Present";
     }
-  ];
+
+    let description = exp.responsibilities[0] || "";
+    if (description.length > 55) {
+      description = description.slice(0, 52) + "...";
+    }
+
+    return {
+      year,
+      title: exp.position,
+      company: exp.company,
+      duration: `${exp.startDate} – ${exp.endDate}`,
+      description: description
+    };
+  });
 
   const calculatePositions = (index: number, total: number) => {
+    if (total <= 1) return { position: "50%", width: "100%" };
     const segment = 100 / (total - 1);
     return {
       position: `${index * segment}%`,
@@ -54,21 +44,14 @@ const GrowthStack = () => {
   };
 
   return (
-    <div className="w-full max-w-7xl mx-auto px-4 py-14">
+    <div className="w-full max-w-7xl mx-auto px-4 py-10">
       {/* Timeline Visualization */}
-      <div className="relative h-3 bg-gradient-to-r from-purple-200 to-purple-100 rounded-full mb-16 shadow-inner">
+      <div className="relative h-3 bg-gradient-to-r from-purple-200 to-indigo-150 rounded-full mb-16 shadow-inner hidden md:block">
         {/* Progress Lines */}
-        {growthData.map((_, index) => {
-          if (index === 0) return null;
-          const { width } = calculatePositions(index, growthData.length);
-          return (
-            <div
-              key={`progress-${index}`}
-              className="absolute h-3 bg-purple-500 rounded-full transition-all duration-700 ease-in-out"
-              style={{ width, left: "-5%" }}
-            ></div>
-          );
-        })}
+        <div 
+          className="absolute h-3 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-full transition-all duration-700 ease-in-out"
+          style={{ width: "100%", left: "0" }}
+        />
 
         {/* Timeline Markers */}
         {growthData.map((_, index) => {
@@ -76,7 +59,7 @@ const GrowthStack = () => {
           return (
             <div
               key={`marker-${index}`}
-              className="absolute -top-2 w-6 h-6 bg-white border-4 border-purple-500 rounded-full shadow-md z-10"
+              className="absolute -top-2.5 w-8 h-8 bg-white border-4 border-purple-500 rounded-xl shadow-md z-10 hover:scale-110 hover:border-indigo-500 transition-all duration-200"
               style={{ left: position, transform: "translateX(-50%)" }}
             />
           );
@@ -88,7 +71,7 @@ const GrowthStack = () => {
           return (
             <div
               key={`year-${index}`}
-              className="absolute top-8 text-xs font-semibold text-purple-700 w-24 text-center"
+              className="absolute top-9 text-xs font-bold text-purple-700 w-24 text-center"
               style={{ left: position, transform: "translateX(-50%)" }}
             >
               {item.year}
@@ -98,17 +81,24 @@ const GrowthStack = () => {
       </div>
 
       {/* Experience Cards */}
-      <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 justify-items-center">
-        {[...growthData].map((item, index) => (
+      <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-6 justify-items-center">
+        {growthData.map((item, index) => (
           <div
             key={`detail-${index}`}
-            className="bg-white border-2 border-purple-100 rounded-lg p-4 shadow-sm hover:shadow-lg hover:border-purple-300 transition w-full max-w-sm group"
+            className="bg-white border border-purple-100 rounded-2xl p-5 shadow-sm hover:shadow-xl hover:border-purple-300 hover:-translate-y-1 transition-all duration-300 w-full max-w-sm group flex flex-col justify-between"
           >
-            <div className="text-sm font-bold text-purple-700 group-hover:text-purple-900">{item.company}</div>
-            <div className="text-xs font-medium text-gray-700 mt-1">{item.title}</div>
-            <div className="text-xs text-gray-600 mt-1">{item.duration}</div>
+            <div>
+              <div className="flex justify-between items-center mb-2">
+                <span className="text-xs font-extrabold text-purple-600 bg-purple-50 px-2.5 py-1 rounded-full md:hidden">
+                  {item.year}
+                </span>
+                <span className="text-[10px] text-gray-500 font-medium italic">{item.duration}</span>
+              </div>
+              <div className="text-sm font-extrabold text-gray-950 group-hover:text-purple-700 transition-colors">{item.company}</div>
+              <div className="text-xs font-semibold text-purple-900 mt-1">{item.title}</div>
+            </div>
             {item.description && (
-              <div className="text-[10px] text-gray-500 mt-2 italic border-t border-gray-100 pt-2">
+              <div className="text-[11px] text-gray-600 mt-4 italic border-t border-purple-50 pt-3">
                 {item.description}
               </div>
             )}

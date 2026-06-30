@@ -3,79 +3,88 @@ import { GitBranch, Layers, Zap, Database } from "lucide-react";
 
 const ProjectMethodology: React.FC = () => {
   return (
-    <div className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-50 via-white to-purple-50">
+    <div className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-indigo-50/30 via-white to-purple-50/50 border-t border-purple-50">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-4xl font-bold text-gray-900 mb-4">
-            How I Build <span className="text-purple-600">Projects & Systems</span>
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-indigo-950 mb-4 tracking-tight">
+            How I Build <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-600 via-indigo-600 to-purple-900 font-extrabold">Projects & Systems</span>
           </h2>
-          <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-            A detailed look at my development process, architectural decisions, and how I approach building scalable, maintainable solutions
+          <div className="w-24 h-1.5 bg-gradient-to-r from-purple-400 to-indigo-600 mx-auto rounded-full mb-6"></div>
+          <p className="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
+            A comprehensive look at my professional engineering lifecycle, architectural patterns, and execution strategies for high-performance software.
           </p>
         </div>
 
         {/* Architecture Overview */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
           {/* Planning & Design Phase */}
-          <div className="p-6 bg-white rounded-xl shadow-lg border-l-4 border-blue-500">
+          <div className="p-6 bg-white/70 backdrop-blur-md rounded-2xl border border-indigo-100/50 shadow-sm hover:shadow-lg transition-all duration-300">
             <div className="flex items-start gap-4">
-              <Layers className="w-8 h-8 text-blue-600 flex-shrink-0 mt-1" />
+              <div className="p-3 bg-blue-50 border border-blue-100 rounded-xl text-blue-600">
+                <Layers className="w-6 h-6 flex-shrink-0" />
+              </div>
               <div className="flex-1">
-                <h3 className="text-xl font-bold text-gray-900 mb-3">Phase 1: Planning & Architecture</h3>
-                <div className="space-y-2 text-sm text-gray-700">
-                  <p><span className="font-semibold">Requirements Analysis:</span> Understanding business goals, user workflows, and performance requirements</p>
-                  <p><span className="font-semibold">System Design:</span> Designing microservices, defining API contracts, planning data flow</p>
-                  <p><span className="font-semibold">Tech Stack Selection:</span> Choosing appropriate tools based on scalability, team expertise, and project needs</p>
-                  <p><span className="font-semibold">Architecture Patterns:</span> Implementing event-driven, CQRS, API Gateway, and other patterns as needed</p>
+                <h3 className="text-lg font-bold text-slate-900 mb-3">Phase 1: Planning & Architecture</h3>
+                <div className="space-y-2.5 text-sm text-slate-650">
+                  <p><span className="font-bold text-indigo-950">Requirements Analysis:</span> Designing metrics to scope performance, concurrent users, and business workflows.</p>
+                  <p><span className="font-bold text-indigo-950">System Design:</span> Modelling microservices domains, mapping database schemas, and planning async communication layers.</p>
+                  <p><span className="font-bold text-indigo-950">Tech Stack Choice:</span> Deploying matching database layers based on caching requirements and replication factors.</p>
+                  <p><span className="font-bold text-indigo-950">Architectural Patterns:</span> Incorporating clean architectures, Saga orchestrations, API gateways, and CQRS patterns.</p>
                 </div>
               </div>
             </div>
           </div>
 
           {/* Development & Implementation */}
-          <div className="p-6 bg-white rounded-xl shadow-lg border-l-4 border-purple-500">
+          <div className="p-6 bg-white/70 backdrop-blur-md rounded-2xl border border-purple-100/50 shadow-sm hover:shadow-lg transition-all duration-300">
             <div className="flex items-start gap-4">
-              <GitBranch className="w-8 h-8 text-purple-600 flex-shrink-0 mt-1" />
+              <div className="p-3 bg-purple-50 border border-purple-100 rounded-xl text-purple-650">
+                <GitBranch className="w-6 h-6 flex-shrink-0" />
+              </div>
               <div className="flex-1">
-                <h3 className="text-xl font-bold text-gray-900 mb-3">Phase 2: Development & Implementation</h3>
-                <div className="space-y-2 text-sm text-gray-700">
-                  <p><span className="font-semibold">Modular Development:</span> Building independent services that can be developed and deployed separately</p>
-                  <p><span className="font-semibold">Code Quality:</span> Following SOLID principles, design patterns, and maintaining code reviews</p>
-                  <p><span className="font-semibold">Testing:</span> Unit tests, integration tests, and end-to-end testing for reliability</p>
-                  <p><span className="font-semibold">CI/CD Pipeline:</span> Automated testing and deployment using GitHub Actions or Azure DevOps</p>
+                <h3 className="text-lg font-bold text-slate-900 mb-3">Phase 2: Code & Implementation</h3>
+                <div className="space-y-2.5 text-sm text-slate-650">
+                  <p><span className="font-bold text-indigo-950">Modular Coding:</span> Writing loosely coupled, single-responsibility services that deploy independently via containers.</p>
+                  <p><span className="font-bold text-indigo-950">Code Standards:</span> Adhering strictly to SOLID principles, design patterns, and code review criteria.</p>
+                  <p><span className="font-bold text-indigo-950">Testing:</span> Implementing test-driven code (TDD) for critical pipelines and performing automated regressions.</p>
+                  <p><span className="font-bold text-indigo-950">CI/CD:</span> Automating integration and deployment steps via GitHub Actions or Azure DevOps release pipelines.</p>
                 </div>
               </div>
             </div>
           </div>
 
           {/* Performance & Optimization */}
-          <div className="p-6 bg-white rounded-xl shadow-lg border-l-4 border-green-500">
+          <div className="p-6 bg-white/70 backdrop-blur-md rounded-2xl border border-emerald-100/50 shadow-sm hover:shadow-lg transition-all duration-300">
             <div className="flex items-start gap-4">
-              <Zap className="w-8 h-8 text-green-600 flex-shrink-0 mt-1" />
+              <div className="p-3 bg-emerald-50 border border-emerald-100 rounded-xl text-emerald-650">
+                <Zap className="w-6 h-6 flex-shrink-0" />
+              </div>
               <div className="flex-1">
-                <h3 className="text-xl font-bold text-gray-900 mb-3">Phase 3: Performance & Optimization</h3>
-                <div className="space-y-2 text-sm text-gray-700">
-                  <p><span className="font-semibold">Query Optimization:</span> Analyzing slow queries, adding indexes, and optimizing database access patterns</p>
-                  <p><span className="font-semibold">Caching Strategy:</span> Implementing Redis caching for frequently accessed data and reducing database load</p>
-                  <p><span className="font-semibold">Async Processing:</span> Using background jobs and message queues for non-blocking operations</p>
-                  <p><span className="font-semibold">Load Testing:</span> Simulating high concurrency to identify bottlenecks and ensure system stability</p>
+                <h3 className="text-lg font-bold text-slate-900 mb-3">Phase 3: Caching & Resilience</h3>
+                <div className="space-y-2.5 text-sm text-slate-650">
+                  <p><span className="font-bold text-indigo-950">Query Optimization:</span> Refactoring slow SQL queries, analyzing indexing configurations, and pooling connections.</p>
+                  <p><span className="font-bold text-indigo-950">Caching Systems:</span> Setting up Redis servers to cache session data and queries, enhancing response speed by 30%.</p>
+                  <p><span className="font-bold text-indigo-950">Asynchronous Tasks:</span> Offloading non-blocking write workloads to background workers using Kafka or AWS SQS.</p>
+                  <p><span className="font-bold text-indigo-950">Stress Testing:</span> Performing load testing to identify scaling vulnerabilities under simulated traffic spikes.</p>
                 </div>
               </div>
             </div>
           </div>
 
           {/* Monitoring & Maintenance */}
-          <div className="p-6 bg-white rounded-xl shadow-lg border-l-4 border-orange-500">
+          <div className="p-6 bg-white/70 backdrop-blur-md rounded-2xl border border-amber-100/50 shadow-sm hover:shadow-lg transition-all duration-300">
             <div className="flex items-start gap-4">
-              <Database className="w-8 h-8 text-orange-600 flex-shrink-0 mt-1" />
+              <div className="p-3 bg-amber-50 border border-amber-100 rounded-xl text-amber-650">
+                <Database className="w-6 h-6 flex-shrink-0" />
+              </div>
               <div className="flex-1">
-                <h3 className="text-xl font-bold text-gray-900 mb-3">Phase 4: Monitoring & Maintenance</h3>
-                <div className="space-y-2 text-sm text-gray-700">
-                  <p><span className="font-semibold">Logging & Observability:</span> Comprehensive logging using Application Insights or similar tools</p>
-                  <p><span className="font-semibold">Performance Metrics:</span> Tracking API response times, error rates, and system health</p>
-                  <p><span className="font-semibold">Alerting:</span> Setting up alerts for anomalies and critical issues</p>
-                  <p><span className="font-semibold">Continuous Improvement:</span> Regular reviews and optimizations based on production data</p>
+                <h3 className="text-lg font-bold text-slate-900 mb-3">Phase 4: Monitoring & Observability</h3>
+                <div className="space-y-2.5 text-sm text-slate-650">
+                  <p><span className="font-bold text-indigo-950">Telemetry:</span> Embedding App Insights or Prometheus alerts to monitor live system anomalies.</p>
+                  <p><span className="font-bold text-indigo-950">Metrics Collection:</span> Tracking transaction latencies, database locks, and overall CPU utilization.</p>
+                  <p><span className="font-bold text-indigo-950">Hotfix Management:</span> Responding to production incidents and delivering zero-downtime rolling upgrades.</p>
+                  <p><span className="font-bold text-indigo-950">Iterative Updates:</span> Refactoring legacy architectures based on live performance data.</p>
                 </div>
               </div>
             </div>
@@ -83,110 +92,94 @@ const ProjectMethodology: React.FC = () => {
         </div>
 
         {/* Technology Integration Deep Dive */}
-        <div className="mb-12 p-8 bg-white rounded-xl shadow-lg border-2 border-purple-100">
-          <h3 className="text-2xl font-bold text-gray-900 mb-6">Technology & Implementation Details</h3>
+        <div className="mb-12 p-8 bg-white/60 backdrop-blur-md rounded-3xl border border-purple-100/50 shadow-sm">
+          <h3 className="text-2xl font-extrabold text-indigo-950 mb-6">Technical Architecture & Stack Layouts</h3>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {/* Backend Architecture */}
-            <div>
-              <h4 className="text-lg font-bold text-purple-700 mb-4 flex items-center gap-2">
-                <span className="w-2 h-2 bg-purple-600 rounded-full"></span>
-                Backend Architecture
+            <div className="p-5 bg-purple-50/30 rounded-2xl border border-purple-100/40">
+              <h4 className="text-md font-bold text-purple-800 mb-4 flex items-center gap-2">
+                <span className="w-2 h-2 bg-purple-500 rounded-full"></span>
+                Backend Infrastructure
               </h4>
-              <div className="space-y-3 text-sm text-gray-700">
-                <div className="p-3 bg-purple-50 rounded-lg">
-                  <p className="font-semibold text-gray-900">ASP.NET Core Services</p>
-                  <p className="text-xs mt-1">Entity Framework for ORM, async/await patterns, dependency injection for loose coupling</p>
+              <div className="space-y-3 text-xs sm:text-sm text-slate-700">
+                <div className="p-3.5 bg-white/80 border border-purple-100/40 rounded-xl">
+                  <p className="font-bold text-purple-950">ASP.NET Core Services</p>
+                  <p className="text-xs text-slate-500 mt-1">EF Core integrations, dependency injection scopes, async pipelines, and custom Middlewares.</p>
                 </div>
-                <div className="p-3 bg-purple-50 rounded-lg">
-                  <p className="font-semibold text-gray-900">Node.js / Express</p>
-                  <p className="text-xs mt-1">Lightweight, high-performance APIs, perfect for microservices and real-time features</p>
+                <div className="p-3.5 bg-white/80 border border-purple-100/40 rounded-xl">
+                  <p className="font-bold text-purple-950">Node.js Microservices</p>
+                  <p className="text-xs text-slate-500 mt-1">Express API architectures, non-blocking single-threaded request handlers for real-time operations.</p>
                 </div>
-                <div className="p-3 bg-purple-50 rounded-lg">
-                  <p className="font-semibold text-gray-900">API Gateway Pattern</p>
-                  <p className="text-xs mt-1">Centralized routing, authentication, rate limiting, and request/response transformation</p>
-                </div>
-                <div className="p-3 bg-purple-50 rounded-lg">
-                  <p className="font-semibold text-gray-900">Message Queue Integration</p>
-                  <p className="text-xs mt-1">Kafka, Azure Service Bus for async communication between services</p>
+                <div className="p-3.5 bg-white/80 border border-purple-100/40 rounded-xl">
+                  <p className="font-bold text-purple-950">Event Streaming & Queues</p>
+                  <p className="text-xs text-slate-500 mt-1">Kafka and AWS SQS message broadcasting for reliable service-to-service messaging.</p>
                 </div>
               </div>
             </div>
 
             {/* Data & Caching Layer */}
-            <div>
-              <h4 className="text-lg font-bold text-blue-700 mb-4 flex items-center gap-2">
-                <span className="w-2 h-2 bg-blue-600 rounded-full"></span>
-                Data & Caching Strategy
+            <div className="p-5 bg-blue-50/30 rounded-2xl border border-blue-100/40">
+              <h4 className="text-md font-bold text-blue-800 mb-4 flex items-center gap-2">
+                <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
+                Storage & Cache Architecture
               </h4>
-              <div className="space-y-3 text-sm text-gray-700">
-                <div className="p-3 bg-blue-50 rounded-lg">
-                  <p className="font-semibold text-gray-900">Database Optimization</p>
-                  <p className="text-xs mt-1">SQL Server, PostgreSQL with proper indexing, query optimization, and connection pooling</p>
+              <div className="space-y-3 text-xs sm:text-sm text-slate-700">
+                <div className="p-3.5 bg-white/80 border border-blue-100/40 rounded-xl">
+                  <p className="font-bold text-blue-950">Relational Databases</p>
+                  <p className="text-xs text-slate-500 mt-1">SQL Server and PostgreSQL configured with table partitioning, connection pools, and index tuning.</p>
                 </div>
-                <div className="p-3 bg-blue-50 rounded-lg">
-                  <p className="font-semibold text-gray-900">Redis Caching</p>
-                  <p className="text-xs mt-1">In-memory caching for frequent queries, sessions, and real-time data (20-30% perf improvement)</p>
+                <div className="p-3.5 bg-white/80 border border-blue-100/40 rounded-xl">
+                  <p className="font-bold text-blue-950">Redis Cache Tier</p>
+                  <p className="text-xs text-slate-500 mt-1">Distributed memory database cache layers reducing read queries latency by 30%.</p>
                 </div>
-                <div className="p-3 bg-blue-50 rounded-lg">
-                  <p className="font-semibold text-gray-900">NoSQL Solutions</p>
-                  <p className="text-xs mt-1">MongoDB for flexible schemas, Cosmos DB for global scale and multi-region support</p>
-                </div>
-                <div className="p-3 bg-blue-50 rounded-lg">
-                  <p className="font-semibold text-gray-900">Vector Databases</p>
-                  <p className="text-xs mt-1">For AI/ML features, semantic search, and embeddings (Pinecone, Weaviate)</p>
+                <div className="p-3.5 bg-white/80 border border-blue-100/40 rounded-xl">
+                  <p className="font-bold text-blue-950">NoSQL & Vector Storage</p>
+                  <p className="text-xs text-slate-500 mt-1">MongoDB and Cosmos DB for dynamic schemas; vector databases for AI embeddings indexes.</p>
                 </div>
               </div>
             </div>
 
             {/* Frontend & Real-time */}
-            <div>
-              <h4 className="text-lg font-bold text-green-700 mb-4 flex items-center gap-2">
-                <span className="w-2 h-2 bg-green-600 rounded-full"></span>
-                Frontend & Real-time Systems
+            <div className="p-5 bg-emerald-50/30 rounded-2xl border border-emerald-100/40">
+              <h4 className="text-md font-bold text-emerald-800 mb-4 flex items-center gap-2">
+                <span className="w-2 h-2 bg-emerald-500 rounded-full"></span>
+                Client Experience & WebSockets
               </h4>
-              <div className="space-y-3 text-sm text-gray-700">
-                <div className="p-3 bg-green-50 rounded-lg">
-                  <p className="font-semibold text-gray-900">React Architecture</p>
-                  <p className="text-xs mt-1">Component-based design, Redux for state management, hooks for side effects</p>
+              <div className="space-y-3 text-xs sm:text-sm text-slate-700">
+                <div className="p-3.5 bg-white/80 border border-emerald-100/40 rounded-xl">
+                  <p className="font-bold text-emerald-950">React & Redux Modules</p>
+                  <p className="text-xs text-slate-500 mt-1">Component hierarchies, global Redux Toolkit store configurations, and PWA offline sync.</p>
                 </div>
-                <div className="p-3 bg-green-50 rounded-lg">
-                  <p className="font-semibold text-gray-900">Angular Applications</p>
-                  <p className="text-xs mt-1">Enterprise solutions with dependency injection, RxJS observables, reactive forms</p>
+                <div className="p-3.5 bg-white/80 border border-emerald-100/40 rounded-xl">
+                  <p className="font-bold text-emerald-950">Angular Architectures</p>
+                  <p className="text-xs text-slate-500 mt-1">RxJS streams, reactive forms, modules lazily loaded, and DI service definitions.</p>
                 </div>
-                <div className="p-3 bg-green-50 rounded-lg">
-                  <p className="font-semibold text-gray-900">Real-time Communication</p>
-                  <p className="text-xs mt-1">WebSockets for live updates, SignalR for ASP.NET Core real-time features</p>
-                </div>
-                <div className="p-3 bg-green-50 rounded-lg">
-                  <p className="font-semibold text-gray-900">PWA & Offline Support</p>
-                  <p className="text-xs mt-1">Service workers for offline functionality and improved user experience</p>
+                <div className="p-3.5 bg-white/80 border border-emerald-100/40 rounded-xl">
+                  <p className="font-bold text-emerald-950">Real-Time WebSocket layers</p>
+                  <p className="text-xs text-slate-500 mt-1">SignalR hubs and socket rooms for streaming updates and messaging feeds.</p>
                 </div>
               </div>
             </div>
 
             {/* Security & DevOps */}
-            <div>
-              <h4 className="text-lg font-bold text-red-700 mb-4 flex items-center gap-2">
-                <span className="w-2 h-2 bg-red-600 rounded-full"></span>
-                Security & DevOps
+            <div className="p-5 bg-amber-50/30 rounded-2xl border border-amber-100/40">
+              <h4 className="text-md font-bold text-amber-800 mb-4 flex items-center gap-2">
+                <span className="w-2 h-2 bg-amber-500 rounded-full"></span>
+                Security, Infrastructure & CI/CD
               </h4>
-              <div className="space-y-3 text-sm text-gray-700">
-                <div className="p-3 bg-red-50 rounded-lg">
-                  <p className="font-semibold text-gray-900">Authentication</p>
-                  <p className="text-xs mt-1">JWT, OAuth2, OIDC with Entra ID, Okta integration for SSO</p>
+              <div className="space-y-3 text-xs sm:text-sm text-slate-700">
+                <div className="p-3.5 bg-white/80 border border-amber-100/40 rounded-xl">
+                  <p className="font-bold text-amber-950">Authentication & Security</p>
+                  <p className="text-xs text-slate-500 mt-1">OAuth2, OIDC, JWT sign-ins, Entra ID (Azure AD), OKTA, and secure certificate keys.</p>
                 </div>
-                <div className="p-3 bg-red-50 rounded-lg">
-                  <p className="font-semibold text-gray-900">Containerization</p>
-                  <p className="text-xs mt-1">Docker for consistent environments, Kubernetes for orchestration</p>
+                <div className="p-3.5 bg-white/80 border border-amber-100/40 rounded-xl">
+                  <p className="font-bold text-amber-950">Containers & Kubernetes</p>
+                  <p className="text-xs text-slate-500 mt-1">Docker containerization and Kubernetes cluster setups for orchestration.</p>
                 </div>
-                <div className="p-3 bg-red-50 rounded-lg">
-                  <p className="font-semibold text-gray-900">CI/CD Pipeline</p>
-                  <p className="text-xs mt-1">GitHub Actions, Azure DevOps for automated testing and deployments</p>
-                </div>
-                <div className="p-3 bg-red-50 rounded-lg">
-                  <p className="font-semibold text-gray-900">Cloud Infrastructure</p>
-                  <p className="text-xs mt-1">Azure (App Services, Functions), AWS (EC2, Lambda, RDS) for scalable deployment</p>
+                <div className="p-3.5 bg-white/80 border border-amber-100/40 rounded-xl">
+                  <p className="font-bold text-amber-950">Automated Delivery</p>
+                  <p className="text-xs text-slate-500 mt-1">CI/CD automation pipelines via GitHub Actions and Azure DevOps pipelines.</p>
                 </div>
               </div>
             </div>
@@ -194,82 +187,74 @@ const ProjectMethodology: React.FC = () => {
         </div>
 
         {/* Real Project Examples */}
-        <div className="p-8 bg-gradient-to-r from-purple-100 to-blue-100 rounded-xl">
-          <h3 className="text-2xl font-bold text-gray-900 mb-6">Real Project Examples</h3>
+        <div className="p-8 bg-gradient-to-r from-purple-50 to-indigo-50/80 rounded-3xl border border-purple-100">
+          <h3 className="text-2xl font-extrabold text-indigo-950 mb-6 text-center">Selected Case Studies</h3>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {/* Healthcare Platform Example */}
-            <div className="bg-white p-6 rounded-lg">
-              <h4 className="text-lg font-bold text-purple-700 mb-3">Healthcare SaaS Platform</h4>
-              <p className="text-sm text-gray-700 mb-3">
-                <span className="font-semibold">Challenge:</span> Support ~10K concurrent users with real-time data updates for patient care
+            <div className="bg-white/85 border border-indigo-100/50 p-6 rounded-2xl shadow-sm">
+              <h4 className="text-lg font-extrabold text-purple-900 mb-3">Healthcare SaaS Application</h4>
+              <p className="text-sm text-slate-600 mb-3">
+                <span className="font-bold text-indigo-950">Challenge:</span> Supporting ~10K concurrent users while offering responsive offline data synchronization.
               </p>
-              <div className="space-y-2 text-sm">
-                <p><span className="font-semibold text-gray-900">Solution Architecture:</span></p>
-                <ul className="text-gray-700 space-y-1 ml-3">
-                  <li>• React PWA for offline-first capabilities</li>
-                  <li>• ASP.NET Core microservices for scalability</li>
-                  <li>• SignalR for real-time patient updates</li>
-                  <li>• Redis caching for frequently accessed medical data</li>
-                  <li>• PostgreSQL with optimized indexes</li>
-                  <li>• Achieved 20-30% performance improvement</li>
+              <div className="space-y-2 text-xs sm:text-sm">
+                <p><span className="font-bold text-indigo-950">Solution Features:</span></p>
+                <ul className="text-slate-600 space-y-1.5 ml-1">
+                  <li className="flex items-center gap-1.5"><span className="h-1.5 w-1.5 rounded-full bg-purple-500" /> React Progressive Web App (PWA)</li>
+                  <li className="flex items-center gap-1.5"><span className="h-1.5 w-1.5 rounded-full bg-purple-500" /> .NET Core microservices architecture</li>
+                  <li className="flex items-center gap-1.5"><span className="h-1.5 w-1.5 rounded-full bg-purple-500" /> SignalR sockets for real-time patient charts</li>
+                  <li className="flex items-center gap-1.5"><span className="h-1.5 w-1.5 rounded-full bg-purple-500" /> Redis server queries caching</li>
                 </ul>
               </div>
             </div>
 
             {/* Fintech Platform Example */}
-            <div className="bg-white p-6 rounded-lg">
-              <h4 className="text-lg font-bold text-purple-700 mb-3">Fintech Trading Platform</h4>
-              <p className="text-sm text-gray-700 mb-3">
-                <span className="font-semibold">Challenge:</span> Handle high-frequency trading data with real-time market updates
+            <div className="bg-white/85 border border-indigo-100/50 p-6 rounded-2xl shadow-sm">
+              <h4 className="text-lg font-extrabold text-purple-900 mb-3">Fintech Trading Architecture</h4>
+              <p className="text-sm text-slate-600 mb-3">
+                <span className="font-bold text-indigo-950">Challenge:</span> Offloading database heavy tasks and pushing live tickers changes without blocking transactions.
               </p>
-              <div className="space-y-2 text-sm">
-                <p><span className="font-semibold text-gray-900">Solution Architecture:</span></p>
-                <ul className="text-gray-700 space-y-1 ml-3">
-                  <li>• Microservices for trading, portfolio, orders</li>
-                  <li>• SignalR/WebSockets for real-time market data</li>
-                  <li>• Message queues for async order processing</li>
-                  <li>• Redis for caching market data</li>
-                  <li>• Azure SQL for transactional consistency</li>
-                  <li>• JWT-based secure authentication</li>
+              <div className="space-y-2 text-xs sm:text-sm">
+                <p><span className="font-bold text-indigo-950">Solution Features:</span></p>
+                <ul className="text-slate-600 space-y-1.5 ml-1">
+                  <li className="flex items-center gap-1.5"><span className="h-1.5 w-1.5 rounded-full bg-indigo-500" /> Separated trading and portfolio domains</li>
+                  <li className="flex items-center gap-1.5"><span className="h-1.5 w-1.5 rounded-full bg-indigo-500" /> Asynchronous queues order validation</li>
+                  <li className="flex items-center gap-1.5"><span className="h-1.5 w-1.5 rounded-full bg-indigo-500" /> WebSockets streaming database quotes</li>
+                  <li className="flex items-center gap-1.5"><span className="h-1.5 w-1.5 rounded-full bg-indigo-500" /> OAuth2 secure SSO tokens</li>
                 </ul>
               </div>
             </div>
 
             {/* AI Integration Example */}
-            <div className="bg-white p-6 rounded-lg">
-              <h4 className="text-lg font-bold text-purple-700 mb-3">AI-Assisted E-Commerce</h4>
-              <p className="text-sm text-gray-700 mb-3">
-                <span className="font-semibold">Challenge:</span> Integrate intelligent search and recommendations using AI
+            <div className="bg-white/85 border border-indigo-100/50 p-6 rounded-2xl shadow-sm">
+              <h4 className="text-lg font-extrabold text-purple-900 mb-3">AI Document Parsing Pipeline</h4>
+              <p className="text-sm text-slate-600 mb-3">
+                <span className="font-bold text-indigo-950">Challenge:</span> Implementing semantic searching capability and summaries over massive business databases.
               </p>
-              <div className="space-y-2 text-sm">
-                <p><span className="font-semibold text-gray-900">Solution Architecture:</span></p>
-                <ul className="text-gray-700 space-y-1 ml-3">
-                  <li>• RAG pipeline with vector embeddings</li>
-                  <li>• LangChain for AI orchestration</li>
-                  <li>• React frontend for chat interface</li>
-                  <li>• Node.js backend for API integration</li>
-                  <li>• Product catalog in vector DB</li>
-                  <li>• Conversation memory for context</li>
+              <div className="space-y-2 text-xs sm:text-sm">
+                <p><span className="font-bold text-indigo-950">Solution Features:</span></p>
+                <ul className="text-slate-600 space-y-1.5 ml-1">
+                  <li className="flex items-center gap-1.5"><span className="h-1.5 w-1.5 rounded-full bg-indigo-500" /> RAG pipeline feeding custom OpenAI indexes</li>
+                  <li className="flex items-center gap-1.5"><span className="h-1.5 w-1.5 rounded-full bg-indigo-500" /> LangChain workflow manager integration</li>
+                  <li className="flex items-center gap-1.5"><span className="h-1.5 w-1.5 rounded-full bg-indigo-500" /> Pinecone semantic vector database indexes</li>
+                  <li className="flex items-center gap-1.5"><span className="h-1.5 w-1.5 rounded-full bg-indigo-500" /> Memory logs holding conversation state</li>
                 </ul>
               </div>
             </div>
 
             {/* Microservices Example */}
-            <div className="bg-white p-6 rounded-lg">
-              <h4 className="text-lg font-bold text-purple-700 mb-3">Microservices Migration</h4>
-              <p className="text-sm text-gray-700 mb-3">
-                <span className="font-semibold">Challenge:</span> Migrate monolithic legacy system to microservices
+            <div className="bg-white/85 border border-indigo-100/50 p-6 rounded-2xl shadow-sm">
+              <h4 className="text-lg font-extrabold text-purple-900 mb-3">Monolith Migration Project</h4>
+              <p className="text-sm text-slate-600 mb-3">
+                <span className="font-bold text-indigo-950">Challenge:</span> Breaking a heavy legacy system into independent containers without disruption.
               </p>
-              <div className="space-y-2 text-sm">
-                <p><span className="font-semibold text-gray-900">Solution Architecture:</span></p>
-                <ul className="text-gray-700 space-y-1 ml-3">
-                  <li>• API Gateway for centralized routing</li>
-                  <li>• Independent ASP.NET Core services</li>
-                  <li>• Event-driven communication with Service Bus</li>
-                  <li>• Entra ID for authentication migration</li>
-                  <li>• Docker & Kubernetes for deployment</li>
-                  <li>• CI/CD with GitHub Actions</li>
+              <div className="space-y-2 text-xs sm:text-sm">
+                <p><span className="font-bold text-indigo-950">Solution Features:</span></p>
+                <ul className="text-slate-600 space-y-1.5 ml-1">
+                  <li className="flex items-center gap-1.5"><span className="h-1.5 w-1.5 rounded-full bg-indigo-500" /> API gateway layer routing requests</li>
+                  <li className="flex items-center gap-1.5"><span className="h-1.5 w-1.5 rounded-full bg-indigo-500" /> Azure Service Bus routing event streams</li>
+                  <li className="flex items-center gap-1.5"><span className="h-1.5 w-1.5 rounded-full bg-indigo-500" /> Docker containers and Kubernetes clusters</li>
+                  <li className="flex items-center gap-1.5"><span className="h-1.5 w-1.5 rounded-full bg-indigo-500" /> Automated deployment pipelines</li>
                 </ul>
               </div>
             </div>
@@ -277,22 +262,22 @@ const ProjectMethodology: React.FC = () => {
         </div>
 
         {/* Key Technologies Used */}
-        <div className="mt-12 p-6 bg-white rounded-xl shadow-lg">
-          <h3 className="text-2xl font-bold text-gray-900 mb-6">Key Technologies & Tools</h3>
+        <div className="mt-12 p-6 bg-white/70 backdrop-blur-md border border-purple-100/50 shadow-sm rounded-2xl">
+          <h3 className="text-2xl font-extrabold text-indigo-950 mb-6">Unified Matrix</h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {[
-              { label: "Backend", items: "ASP.NET Core, Node.js, Express" },
-              { label: "Frontend", items: "React, Angular, TypeScript" },
-              { label: "Databases", items: "SQL Server, PostgreSQL, MongoDB" },
-              { label: "Cloud", items: "Azure, AWS, Docker, Kubernetes" },
-              { label: "Real-time", items: "WebSockets, SignalR, Kafka" },
-              { label: "AI/ML", items: "LangChain, OpenAI, Vector DB" },
-              { label: "DevOps", items: "GitHub Actions, Azure DevOps" },
-              { label: "Security", items: "JWT, OAuth2, OIDC, Entra ID" },
+              { label: "Backend Core", items: "ASP.NET Core, Node.js, Express" },
+              { label: "Frontend Core", items: "React, Angular, TypeScript" },
+              { label: "Databases & Storage", items: "SQL Server, PostgreSQL, MongoDB" },
+              { label: "Cloud & Kubernetes", items: "Azure, AWS, Docker, Kubernetes" },
+              { label: "Messaging & Real-time", items: "WebSockets, SignalR, Kafka" },
+              { label: "AI Integrations", items: "LangChain, OpenAI, Vector DB" },
+              { label: "DevOps Pipelines", items: "GitHub Actions, Azure DevOps" },
+              { label: "Identity & Sec", items: "JWT, OAuth2, OIDC, Entra ID" },
             ].map((tech, idx) => (
-              <div key={idx} className="p-4 bg-gray-50 rounded-lg border border-gray-200 hover:border-purple-300 transition">
-                <p className="font-bold text-purple-700 text-sm mb-2">{tech.label}</p>
-                <p className="text-xs text-gray-600">{tech.items}</p>
+              <div key={idx} className="p-4 bg-slate-50 border border-slate-200/50 rounded-xl hover:border-purple-300 hover:bg-white transition-all duration-300">
+                <p className="font-bold text-purple-750 text-xs mb-2">{tech.label}</p>
+                <p className="text-[10px] sm:text-xs text-slate-650 mt-1 font-medium">{tech.items}</p>
               </div>
             ))}
           </div>

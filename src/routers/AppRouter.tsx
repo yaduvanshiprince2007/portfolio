@@ -10,6 +10,7 @@ const PageNotFound = React.lazy(()=>import('../pages/PageNotFound'));
 const InternshipsAndJobs = React.lazy(()=>import('../pages/IntershipsAndJobs'));
 const Projects = React.lazy(()=>import('../pages/Projects'));
 const AboutMe = React.lazy(()=>import('../pages/AboutPage'));
+const ResumePage = React.lazy(()=>import('../pages/Resume'));
 
 
 
@@ -29,6 +30,7 @@ const AppRouter: React.FC = () => (
     <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/resume" element={<ResumePage />} />
         <Route path='/work' element={<InternshipsAndJobs />} />
         <Route path='/projects' element={<Projects />} />
         <Route path="/aboutme" element={<AboutMe />} />

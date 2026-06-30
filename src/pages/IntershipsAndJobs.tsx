@@ -9,9 +9,9 @@ const InternshipsAndJobs = () => {
   const [section, setSection] = useState<'all' | 'work' | 'internship'>('all');
 
   const tabClass = (active: boolean) => `
-    flex items-center justify-center px-4 py-1.5 sm:px-5 sm:py-2 rounded-lg
-    text-sm sm:text-base font-medium transition-all duration-200
-    ${active ? 'bg-orange-600 text-white' : 'text-gray-800 hover:bg-orange-100/60'}
+    flex items-center justify-center px-4 py-2 rounded-xl
+    text-xs sm:text-sm font-bold transition-all duration-300
+    ${active ? 'bg-orange-600 text-white shadow-md shadow-orange-600/20' : 'text-slate-800 hover:bg-orange-50/50 hover:text-orange-700'}
   `;
 
   const renderContent = () => {
@@ -38,9 +38,9 @@ const InternshipsAndJobs = () => {
 
       {/* Floating Pill-Style Toggle Tabs */}
       <div className="
-        fixed bottom-4 left-1/2 transform -translate-x-1/2 z-50
-        bg-white/30 backdrop-blur-md border border-white/20
-        rounded-2xl px-1 sm:px-2 py-1 flex space-x-1 sm:space-x-2
+        fixed bottom-6 left-1/2 transform -translate-x-1/2 z-40
+        bg-white/80 backdrop-blur-xl border border-orange-100/50 shadow-xl
+        rounded-2xl p-1.5 flex space-x-1.5 print:hidden
       ">
 
         <button

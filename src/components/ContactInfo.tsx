@@ -5,7 +5,7 @@ const ContactInfo: React.FC = () => {
   const personal = RESUME_DATA.personal;
 
   return (
-    <div className="surface-panel rounded-lg shadow-md p-6 transition-all hover:shadow-lg">
+    <div className="bg-white border border-purple-100/45 rounded-3xl p-6 sm:p-8 shadow-xl transition-all duration-300 hover:shadow-purple-500/10 glow-card-purple">
       <h2 className="text-2xl font-semibold text-gray-800 mb-4">Contact Information</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {/* Email */}

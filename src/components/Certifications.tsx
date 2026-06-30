@@ -6,7 +6,7 @@ const Certifications: React.FC = () => {
   const certifications = RESUME_DATA.certifications;
 
   return (
-    <div className="surface-panel rounded-lg shadow-md p-6 transition-all hover:shadow-lg">
+    <div className="bg-white border border-purple-100/45 rounded-3xl p-6 sm:p-8 shadow-xl transition-all duration-300 hover:shadow-purple-500/10 glow-card-purple">
       <div className="flex items-center mb-6">
         <Award className="w-6 h-6 text-purple-600 mr-3" />
         <h2 className="text-2xl font-semibold text-gray-800">Certifications</h2>

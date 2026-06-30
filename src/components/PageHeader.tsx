@@ -1,83 +1,124 @@
-import { useState } from "react";
-import { RESUME } from "../AppConstraint";
+import { RESUME_DATA, URLS } from "../AppConstraint";
 import GrowthStack from "./GrowthStack";
-import { FiFileText } from "react-icons/fi";
+import profileimg from "../assets/profileImg.jpeg";
+import { Github, Linkedin, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const PageHeader = () => {
-  const [isCreating, setIsCreating] = useState(false);
-
-  const createResumeOnDemand = async () => {
-    try {
-      setIsCreating(true);
-      const response = await fetch(RESUME.PDF);
-      const blob = await response.blob();
-      const url = window.URL.createObjectURL(blob);
-      const link = document.createElement("a");
-      link.href = url;
-      link.download = "Prince_Resume.pdf";
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-      window.URL.revokeObjectURL(url);
-    } catch (error) {
-      console.error("Unable to create resume:", error);
-    } finally {
-      setIsCreating(false);
-    }
-  };
+  const personal = RESUME_DATA.personal;
 
   return (
-    <header className="relative text-purple-900 py-16 md:py-32 bg-gradient-to-br from-purple-50 via-white to-blue-50 overflow-hidden">
-      {/* Decorative elements */}
-      <div className="absolute inset-0 overflow-hidden opacity-20">
-        <div className="absolute top-0 left-1/4 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob"></div>
-        <div className="absolute top-0 right-1/4 w-72 h-72 bg-blue-300 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-2000"></div>
-        <div className="absolute -bottom-8 left-1/2 w-72 h-72 bg-purple-400 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-4000"></div>
+    <header className="relative text-slate-800 py-24 md:py-32 bg-gradient-to-b from-slate-50 via-white to-indigo-50/30 overflow-hidden border-b border-slate-200/60">
+
+      {/* Decorative backdrop with subtle light gradients */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute -top-12 left-1/10 w-96 h-96 bg-indigo-200/30 rounded-full mix-blend-multiply filter blur-3xl opacity-40 animate-pulse-slow" />
+        <div className="absolute -top-12 right-1/10 w-96 h-96 bg-cyan-200/30 rounded-full mix-blend-multiply filter blur-3xl opacity-40 animate-pulse-slow duration-3000" />
+        <div className="absolute bottom-10 left-1/3 w-[500px] h-[500px] bg-purple-200/20 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse-slow duration-5000" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-blue-100/10 rounded-full filter blur-3xl" />
       </div>
 
-      <div className="container mx-auto px-4 flex flex-col items-center z-10 relative">
-        {/* Badge */}
-        <div className="mb-6 inline-block px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-semibold">
-          4+ Years of Experience
+      <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-8 md:px-12 lg:px-16 z-10 relative">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center mb-20">
+
+          {/* Left Column - Details */}
+          <div className="lg:col-span-7 flex flex-col items-start text-left">
+            {/* Experience Badge - Light theme */}
+            <div className="mb-6 inline-flex items-center gap-2.5 px-4.5 py-2.5 bg-white/80 border border-indigo-200/60 text-indigo-700 rounded-full text-xs sm:text-sm font-bold shadow-sm backdrop-blur-md">
+              <span className="flex h-2 w-2 relative">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-indigo-500"></span>
+              </span>
+              5 Years of Full-Stack Expertise
+            </div>
+
+            {/* Main Title with Gradient */}
+            <h1 className="text-5xl sm:text-6xl md:text-7xl font-extrabold mb-4 tracking-tight leading-none text-slate-800">
+              Hi, I'm{" "}
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 via-indigo-500 to-purple-600 font-extrabold">
+                {personal.name}
+              </span>
+            </h1>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-700 mb-6">
+              {personal.title}
+            </h2>
+
+            {/* Subtitle / Summary */}
+            <p className="text-base sm:text-lg text-slate-600 mb-8 max-w-2xl leading-relaxed font-medium">
+              {personal.subtitle}. Specialized in building secure, high-concurrency cloud-native solutions with .NET Core, React, and Azure.
+            </p>
+
+            {/* Action CTAs */}
+            <div className="flex flex-wrap gap-4 items-center">
+              <Link
+                to="/resume"
+                className="inline-flex items-center gap-2.5 px-8 py-4 bg-gradient-to-r from-indigo-600 via-indigo-700 to-purple-700 hover:from-indigo-500 hover:to-purple-600 text-white font-extrabold rounded-full transition-all duration-300 shadow-lg shadow-indigo-500/25 hover:shadow-indigo-500/40 hover:-translate-y-0.5 active:scale-95 text-sm"
+              >
+                <span>View Digital Resume</span>
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+
+              {/* Secondary Contacts - Light theme */}
+              <div className="flex gap-2.5">
+                <a
+                  href={URLS.GITHUB}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-3 bg-white/80 hover:bg-white border border-slate-200 text-slate-600 hover:text-indigo-600 rounded-full transition-all duration-300 shadow-sm hover:shadow-md hover:-translate-y-0.5 active:scale-95"
+                  title="GitHub Profile"
+                >
+                  <Github className="w-4.5 h-4.5" />
+                </a>
+                <a
+                  href={URLS.LINKEDIN}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-3 bg-white/80 hover:bg-white border border-slate-200 text-slate-600 hover:text-indigo-600 rounded-full transition-all duration-300 shadow-sm hover:shadow-md hover:-translate-y-0.5 active:scale-95"
+                  title="LinkedIn Profile"
+                >
+                  <Linkedin className="w-4.5 h-4.5" />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* Right Column - Floating Image Card - Light theme */}
+          <div className="lg:col-span-5 flex justify-center lg:justify-end">
+            <div className="relative group animate-float">
+              {/* Glowing gradient border */}
+              <div className="absolute -inset-1.5 bg-gradient-to-r from-indigo-400 via-purple-400 to-indigo-500 rounded-3xl blur opacity-30 group-hover:opacity-50 transition duration-1000 group-hover:duration-200" />
+
+              {/* Main Image Box */}
+              <div className="relative bg-white/90 backdrop-blur-md p-4 rounded-3xl border border-slate-200/80 shadow-xl overflow-hidden max-w-sm sm:max-w-xs md:max-w-sm">
+                <img
+                  src={profileimg}
+                  alt={personal.name}
+                  className="rounded-2xl w-full h-auto aspect-square object-cover object-center group-hover:scale-102 transition-all duration-550"
+                />
+
+                {/* Profile Card details - Light theme */}
+                <div className="mt-3.5 flex justify-between items-center px-1">
+                  <div>
+                    <span className="text-xs font-bold text-slate-800 block">{personal.name}</span>
+                    <span className="text-[10px] font-semibold text-slate-500 block">Based in India</span>
+                  </div>
+                  <span className="text-[10px] font-bold text-emerald-700 bg-emerald-50/80 px-2.5 py-0.5 rounded-lg border border-emerald-200/50 flex items-center gap-1">
+                    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                    Available for Work
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
 
-        {/* Heading */}
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-center">
-          <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-600 via-purple-700 to-purple-900">
-            Senior Full Stack Developer
-          </span>
-        </h1>
-
-        {/* Subheading */}
-        <p className="text-xl md:text-2xl text-center mb-4 font-medium text-purple-800/90 max-w-3xl">
-          Building <span className="font-bold text-purple-900">scalable, high-performance systems</span> that handle 10K+ concurrent users.
-        </p>
-
-        {/* Secondary description */}
-        <p className="text-lg text-center mb-12 text-gray-700 max-w-4xl leading-relaxed">
-          Specialized in <span className="font-semibold text-purple-700">backend engineering</span>, <span className="font-semibold text-purple-700">microservices</span>, and <span className="font-semibold text-purple-700">performance optimization</span>. I design systems using <span className="font-semibold">ASP.NET Core, Node.js, React</span>, and <span className="font-semibold">cloud-native architectures</span>.
-        </p>
-
-        {/* Timeline Component */}
-        <div className="mb-14 w-full">
+        {/* Career Timeline stack - Light theme */}
+        <div className="w-full mt-10 pt-10 border-t border-slate-200/60">
+          <h3 className="text-xl sm:text-2xl font-extrabold uppercase text-slate-500 tracking-wider mb-8 text-center">
+            My Professional Career Milestones
+          </h3>
           <GrowthStack />
-        </div>
-
-        {/* Create Resume Button */}
-        <div className="flex flex-col items-center gap-4 justify-center w-full">
-          <button
-            type="button"
-            onClick={createResumeOnDemand}
-            disabled={isCreating}
-            className="inline-flex items-center gap-3 rounded-full bg-gradient-to-r from-purple-600 to-blue-600 px-8 py-4 text-base font-semibold text-white shadow-xl shadow-purple-500/20 transition duration-300 hover:-translate-y-0.5 hover:shadow-2xl disabled:cursor-not-allowed disabled:opacity-70"
-          >
-            <FiFileText className="h-5 w-5" />
-            {isCreating ? "Creating Resume..." : "Create Resume"}
-          </button>
-
-          <p className="text-sm text-gray-600 max-w-md text-center">
-            Click the button to generate your resume on demand. The PDF will download automatically.
-          </p>
         </div>
       </div>
     </header>

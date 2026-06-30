@@ -1,1 +1,93 @@
-@import "tailwindcss"
+@import "tailwindcss";
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-12px) rotate(0.5deg); }
+}
+
+@keyframes pulse-slow {
+  0%, 100% { opacity: 0.5; transform: scale(1); }
+  50% { opacity: 0.75; transform: scale(1.03); }
+}
+
+@keyframes border-spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 8s ease-in-out infinite;
+}
+
+.animate-border-spin {
+  animation: border-spin 12s linear infinite;
+}
+
+.glow-card-purple:hover {
+  box-shadow: 0 0 30px rgba(168, 85, 247, 0.2);
+  border-color: rgba(168, 85, 247, 0.35);
+}
+
+.glow-card-indigo:hover {
+  box-shadow: 0 0 30px rgba(99, 102, 241, 0.2);
+  border-color: rgba(99, 102, 241, 0.35);
+}
+
+.glow-card-emerald:hover {
+  box-shadow: 0 0 30px rgba(16, 185, 129, 0.2);
+  border-color: rgba(16, 185, 129, 0.35);
+}
+
+.glow-text-cyan {
+  text-shadow: 0 0 15px rgba(34, 211, 238, 0.3);
+}
+
+.glow-text-purple {
+  text-shadow: 0 0 15px rgba(168, 85, 247, 0.3);
+}
+
+/* Global Print Layout Customizations */
+@media print {
+  /* Hide navigation bar, contact footer, and any copyright footers */
+  nav,
+  footer,
+  .print-hide,
+  .print\:hidden {
+    display: none !important;
+  }
+  
+  /* Reset background gradients, colors, and shadows to prevent ink wasting */
+  body, 
+  html {
+    background-color: white !important;
+    background: none !important;
+    color: black !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Make sure resume page fits perfectly as a clean document on paper */
+  .min-h-screen,
+  .py-24,
+  .theme-resume {
+    background: none !important;
+    background-color: white !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    min-h: auto !important;
+  }
+
+  /* Remove box shadows and layout borders in prints */
+  .shadow-2xl,
+  .shadow-xl,
+  .shadow-lg,
+  .shadow-md,
+  .shadow-sm {
+    box-shadow: none !important;
+  }
+}
