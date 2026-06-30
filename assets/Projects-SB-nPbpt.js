@@ -1,1 +1,0 @@
-import{j as r,P as e,a as s}from"./index-B9-oJ8Yh.js";import{a as t}from"./ProjectsShowcase-DRV5_y2Q.js";import"./createLucideIcon-CFK7ZEOo.js";import"./code-CdBPVFQH.js";const p=()=>r.jsx(e,{theme:s.projects,children:r.jsx(t,{})});export{p as default};
